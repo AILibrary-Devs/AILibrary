@@ -11,11 +11,11 @@ import java.util.Map;
  *
  * @author kwl
  */
-public interface NeuralReceptorIntf {
+public interface NeuralReceptorsIntf {
     Map<NeuralSignalIntf, NeuralFactorIntf> getInputs();
     
     void AddInput(NeuralSignalIntf signal, NeuralFactorIntf factor);
     void RemoveInput(NeuralSignalIntf signal);
     
-    double getWeightedInput();
+    double getWeightedAggregateInput();
 }

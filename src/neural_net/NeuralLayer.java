@@ -5,14 +5,16 @@
  */
 package neural_net;
 
+import common.Sigmoid;
 import common.InitializerIntf;
+import common.RangeTransformIntf;
 import java.util.ArrayList;
 
 /**
  *
  * @author kwl
  */
-public class NeuralLayer implements NeuralLayerIntf {
+public class NeuralLayer implements NeuralLayerIntf, NeuralLayerFactoryIntf {
 
     private static final long serialVersionUID = 0L;
     
@@ -28,7 +30,14 @@ public class NeuralLayer implements NeuralLayerIntf {
             neurons.add(new Neuron(initializer.getValue()));
         }     
     }
-
+    
+//<editor-fold defaultstate="collapsed" desc="NeuralLayerFactoryIntf methods">
+    @Override
+    public NeuralLayerIntf getLayer(int neuronCount, InitializerIntf neuronBiasInitializer){
+        return new NeuralLayer(neuronCount, neuronBiasInitializer);
+    }
+//</editor-fold>
+    
 //</editor-fold>
         
 //<editor-fold defaultstate="collapsed" desc="NeuralLayerIntf">
@@ -94,7 +103,7 @@ public class NeuralLayer implements NeuralLayerIntf {
     }
 
     @Override
-    public boolean updateErrorsFromExpectedResults(double[] expectedResults, Sigmoid sigmoid) {
+    public boolean updateErrorsFromExpectedResults(double[] expectedResults, RangeTransformIntf sigmoid) {
         if (expectedResults.length != getCount()){
             System.out.printf("Unable to update neuron errors from desired results, because neuron array size [%d] does not match desired result array size [%d].\n", getCount(), expectedResults.length);
             return false;
@@ -102,7 +111,7 @@ public class NeuralLayer implements NeuralLayerIntf {
 
         int result = 0;
         for (Neuron neuron : neurons){
-            neuron.setError((expectedResults[result] - neuron.getOutput()) * Sigmoid.applyDerivative(neuron.getOutput()));
+            neuron.setError((expectedResults[result] - neuron.getOutput()) * sigmoid.derivative(neuron.getOutput()));
             result++;
         }
         
@@ -110,7 +119,7 @@ public class NeuralLayer implements NeuralLayerIntf {
     }
 
     @Override
-    public boolean updateErrorsFromConsumerLayer(NeuralLayerIntf consumerLayer, Sigmoid sigmoid) {
+    public boolean updateErrorsFromConsumerLayer(NeuralLayerIntf consumerLayer, RangeTransformIntf sigmoid) {
 //        if (consumerLayer.getCount() != getCount()){
 //            System.out.printf("Unable to update provider layer neuron errors from consumer layer values, because neuron array size [%d] does not match consumer layer array size [%d].\n", getCount(), consumerLayer.getCount());
 //            return false;
@@ -150,9 +159,10 @@ public class NeuralLayer implements NeuralLayerIntf {
             // ... I think this is effectively saying: set the change on the 
             //     provider layer to how far off the answer was from the expected
             //     answer.
-            for (Neuron providerNeuron : providerLayer.getNeurons()){
-                consumerNeuron.getInputs().get(providerNeuron).addDelta(consumerNeuron.getError() * providerNeuron.getOutput());
-            }
+//            for (Neuron providerNeuron : providerLayer.getNeurons()){
+//                consumerNeuron.getInputs().get(providerNeuron).addDelta(consumerNeuron.getError() * providerNeuron.getOutput());
+//            }
+            providerLayer.getNeurons().forEach((providerNeuron) -> {consumerNeuron.getInputs().get(providerNeuron).addDelta(consumerNeuron.getError() * providerNeuron.getOutput());});
             
             consumerNeuron.addDelta(consumerNeuron.getError() * consumerNeuron.getWeight());
         }

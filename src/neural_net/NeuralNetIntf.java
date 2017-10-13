@@ -5,6 +5,8 @@
  */
 package neural_net;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author kwl
@@ -17,7 +19,16 @@ public interface NeuralNetIntf {
     NeuralLayerIntf getHiddenLayer();
 
     void setOutputLayer(NeuralLayerIntf outputLayer);
+//    NeuralLayerIntf getOutputLayer();
+
+//    NeuralLayerIntf getInputLayer();
+
+    ArrayList<NeuralLayerIntf> getLayers();
+    NeuralLayerIntf getLayer(int index);
+    NeuralLayerIntf getInputLayer();
     NeuralLayerIntf getOutputLayer();
+
+
     
     double getLearningRate();
     void setLearningRate(double learningRate);

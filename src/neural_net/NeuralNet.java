@@ -5,9 +5,11 @@
  */
 package neural_net;
 
+import common.Sigmoid;
 import common.InitializerIntf;
 import common.InitalizerConstant;
 import common.InitalizerRandom;
+import java.util.ArrayList;
 
 /**
  *
@@ -60,6 +62,14 @@ public class NeuralNet implements NeuralNetIntf {
     @Override
     public NeuralLayerIntf getPerceptionLayer() {
         return perceptionLayer;
+    }
+
+    
+
+    
+    @Override
+    public NeuralLayerIntf getInputLayer() {
+        return getPerceptionLayer();
     }
 
     @Override
@@ -164,6 +174,16 @@ public class NeuralNet implements NeuralNetIntf {
     private static void calculateAndAppendTransformation(NeuralNetIntf net) {
         net.getOutputLayer().updateDeltasBasedOnCurrentErrors(net.getHiddenLayer());
         net.getHiddenLayer().updateDeltasBasedOnCurrentErrors(net.getPerceptionLayer());
+    }
+
+    @Override
+    public ArrayList<NeuralLayerIntf> getLayers() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public NeuralLayerIntf getLayer(int index) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
 }

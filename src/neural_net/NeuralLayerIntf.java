@@ -5,7 +5,9 @@
  */
 package neural_net;
 
+import common.Sigmoid;
 import common.InitializerIntf;
+import common.RangeTransformIntf;
 import java.util.ArrayList;
 
 /**
@@ -13,6 +15,7 @@ import java.util.ArrayList;
  * @author kwl
  */
 public interface NeuralLayerIntf {
+
     ArrayList<Neuron> getNeurons();
     int getCount();
     boolean setOutputValues(double[] values);
@@ -22,8 +25,8 @@ public interface NeuralLayerIntf {
     void applyLearning(double learningRate);
     void initializeLearning();
     
-    boolean updateErrorsFromExpectedResults(double[] desiredResults, Sigmoid sigmoid);
-    boolean updateErrorsFromConsumerLayer(NeuralLayerIntf consumerLayer, Sigmoid sigmoid);
+    boolean updateErrorsFromExpectedResults(double[] desiredResults, RangeTransformIntf sigmoid);
+    boolean updateErrorsFromConsumerLayer(NeuralLayerIntf consumerLayer, RangeTransformIntf sigmoid);
     
     boolean updateDeltasBasedOnCurrentErrors(NeuralLayerIntf providerLayer);
 }
