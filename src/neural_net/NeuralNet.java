@@ -7,8 +7,8 @@ package neural_net;
 
 import common.Sigmoid;
 import common.InitializerIntf;
-import common.InitalizerConstant;
-import common.InitalizerRandom;
+import common.InitializerConstant;
+import common.InitializerRandom;
 import java.util.ArrayList;
 
 /**
@@ -33,9 +33,9 @@ public class NeuralNet implements NeuralNetIntf {
     public static NeuralNetIntf neuralNetFactory(int perceptionLayerCount, int hiddenLayerCount, int outputLayerCount) {
         NeuralNetIntf net = new NeuralNet();
         
-        InitializerIntf initializer = new InitalizerRandom();
+        InitializerIntf initializer = new InitializerRandom();
         //set up the layers
-        net.setPerceptionLayer(new NeuralLayer(perceptionLayerCount, new InitalizerConstant(0.0)));
+        net.setPerceptionLayer(new NeuralLayer(perceptionLayerCount, new InitializerConstant(0.0)));
         net.setHiddenLayer(new NeuralLayer(hiddenLayerCount, initializer));
         net.setOutputLayer(new NeuralLayer(outputLayerCount, initializer));
                 

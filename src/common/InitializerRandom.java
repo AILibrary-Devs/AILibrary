@@ -10,7 +10,7 @@ package common;
  * the default minimum value is 0.0, and the default maximum value is 1.0
  * @author kwl
  */
-public class InitalizerRandom implements InitializerIntf {
+public class InitializerRandom implements InitializerIntf {
 
     private static final long serialVersionUID = 0L;
     
@@ -20,9 +20,9 @@ public class InitalizerRandom implements InitializerIntf {
     maximum = DEFAULT_MAXIMUM;
 }
     
-    public InitalizerRandom(){}
+    public InitializerRandom(){}
     
-    public InitalizerRandom(double minimum, double maximum){
+    public InitializerRandom(double minimum, double maximum){
         this.minimum = minimum;
         this.maximum = maximum;
     }

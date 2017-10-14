@@ -2,6 +2,14 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/Users/kwl/Source/AI/AILibrary/src/neural_net/NeuralNetIntf.java</file>
+            <file>file:/Users/kwl/Source/AI/AILibrary/src/neural_net/NeuralNet.java</file>
+            <file>file:/Users/kwl/Source/AI/AILibrary/src/neural_net/NeuralLayer.java</file>
+            <file>file:/Users/kwl/Source/AI/AILibrary/src/neural_net/DataSetProvider.java</file>
+            <file>file:/Users/kwl/Source/AI/AILibrary/src/neural_net/NeuralNetAbstract.java</file>
+            <file>file:/Users/kwl/Source/AI/AILibrary/src/neural_net/DataSetProviderIntf.java</file>
+            <file>file:/Users/kwl/Source/AI/AILibrary/src/neural_net/NeuralLayerFactoryIntf.java</file>
+        </group>
     </open-files>
 </project-private>

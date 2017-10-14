@@ -5,8 +5,8 @@
  */
 package neural_net;
 
-import common.InitalizerConstant;
-import common.InitalizerRandom;
+import common.InitializerConstant;
+import common.InitializerRandom;
 import common.InitializerIntf;
 import common.RangeTransformIntf;
 import common.Sigmoid;
@@ -16,7 +16,8 @@ import java.util.ArrayList;
  *
  * @author kwl
  */
-public abstract class NeuralNetAbstract implements NeuralNetIntf {
+//public abstract class NeuralNetAbstract implements NeuralNetIntf {
+public class NeuralNetAbstract implements NeuralNetIntf {
 
     private static final long serialVersionUID = 0L;
 
@@ -42,60 +43,19 @@ public abstract class NeuralNetAbstract implements NeuralNetIntf {
         }
     }
     
-//    public static NeuralNetIntf neuralNetFactory(int perceptionLayerCount, int hiddenLayerCount, int outputLayerCount) {
-//        NeuralNetIntf net = new NeuralNet();
-//        
-//        InitializerIntf initializer = new InitalizerRandom();
-//        //set up the layers
-//        net.setPerceptionLayer(new NeuralLayer(perceptionLayerCount, new InitalizerConstant(0.0)));
-//        net.setHiddenLayer(new NeuralLayer(hiddenLayerCount, initializer));
-//        net.setOutputLayer(new NeuralLayer(outputLayerCount, initializer));
-//                
-//        //connect layers
-//        net.getHiddenLayer().connectProviderLayer(net.getPerceptionLayer(), initializer);
-//        net.getOutputLayer().connectProviderLayer(net.getHiddenLayer(), initializer);
-//        
-//        return net;
-//    }
+    public static NeuralNetIntf getSimpleNeuralNet(int inputLayerCount, int transformLayerCount, int outputLayerCount){
+        int[] layerNodeCounts = {inputLayerCount};
+        return new NeuralNetAbstract(layerNodeCounts, new InitializerRandom(), new NeuralLayer());
+    }
     
 //</editor-fold>
 
 //<editor-fold defaultstate="collapsed" desc="Properties">
     private ArrayList<NeuralLayerIntf> layers;
     
-    
     public static final double DEFAULT_LEARNING_RATE = 0.5;
     private double learningRate;
     
-//    private RangeTransformIntf sigmoid;
-    
-//    private NeuralLayerIntf perceptionLayer, hiddenLayer, outputLayer;
-
-////    @Override
-//    public void setPerceptionLayer(NeuralLayerIntf perceptionLayer) {
-//        this.perceptionLayer = perceptionLayer;
-//    }
-//
-////    @Override
-//    public NeuralLayerIntf getPerceptionLayer() {
-//        return perceptionLayer;
-//    }
-//
-////    @Override
-//    public void setHiddenLayer(NeuralLayerIntf hiddenLayer) {
-//        this.hiddenLayer = hiddenLayer;
-//    }
-
-////    @Override
-//    public NeuralLayerIntf getHiddenLayer() {
-//        return hiddenLayer;
-//    }
-//
-////    @Override
-//    public void setOutputLayer(NeuralLayerIntf outputLayer) {
-//        this.outputLayer = outputLayer;
-//    }
-
     @Override
     public ArrayList<NeuralLayerIntf> getLayers() {
         return layers;
@@ -197,20 +157,13 @@ public abstract class NeuralNetAbstract implements NeuralNetIntf {
         //...then propagate this learning through the model
         for (int i = net.getLayers().size() - 2; i > 0; i--){
             net.getLayers().get(i).updateErrorsFromConsumerLayer(net.getLayers().get(i + 1), sigmoid);
-        }
-
-//        net.getOutputLayer().updateErrorsFromExpectedResults(expectedData, sigmoid);
-//        net.getHiddenLayer().updateErrorsFromConsumerLayer(net.getOutputLayer(), sigmoid);
-        
+        }        
     }
 
     private static void calculateAndAppendTransformation(NeuralNetIntf net) {
         for (int i = net.getLayers().size() - 1; i > 0; i--){
             net.getLayers().get(i).updateDeltasBasedOnCurrentErrors(net.getLayers().get(i + 1));
         }
-
-//        net.getOutputLayer().updateDeltasBasedOnCurrentErrors(net.getHiddenLayer());
-//        net.getHiddenLayer().updateDeltasBasedOnCurrentErrors(net.getPerceptionLayer());
     }
     
 }

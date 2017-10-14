@@ -9,12 +9,12 @@ package common;
  * Initializer provides constant (set on construction)
  * @author kwl
  */
-public class InitalizerConstant implements InitializerIntf {
+public class InitializerConstant implements InitializerIntf {
 
     private static final long serialVersionUID = 0L;
 
 //<editor-fold defaultstate="collapsed" desc="Constructors">
-    public InitalizerConstant(double constantValue) {
+    public InitializerConstant(double constantValue) {
         value = constantValue;
     }
 //</editor-fold>
