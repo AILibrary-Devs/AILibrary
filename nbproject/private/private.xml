@@ -5,11 +5,8 @@
         <group>
             <file>file:/Users/kwl/Source/AI/AILibrary/src/neural_net/NeuralNetIntf.java</file>
             <file>file:/Users/kwl/Source/AI/AILibrary/src/neural_net/NeuralNet.java</file>
-            <file>file:/Users/kwl/Source/AI/AILibrary/src/neural_net/NeuralLayer.java</file>
             <file>file:/Users/kwl/Source/AI/AILibrary/src/neural_net/DataSetProvider.java</file>
-            <file>file:/Users/kwl/Source/AI/AILibrary/src/neural_net/NeuralNetAbstract.java</file>
             <file>file:/Users/kwl/Source/AI/AILibrary/src/neural_net/DataSetProviderIntf.java</file>
-            <file>file:/Users/kwl/Source/AI/AILibrary/src/neural_net/NeuralLayerFactoryIntf.java</file>
         </group>
     </open-files>
 </project-private>

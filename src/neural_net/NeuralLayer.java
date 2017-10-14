@@ -5,7 +5,6 @@
  */
 package neural_net;
 
-import common.Sigmoid;
 import common.InitializerIntf;
 import common.RangeTransformIntf;
 import java.util.ArrayList;

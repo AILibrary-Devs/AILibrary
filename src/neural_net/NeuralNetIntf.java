@@ -12,13 +12,13 @@ import java.util.ArrayList;
  * @author kwl
  */
 public interface NeuralNetIntf {
-    void setPerceptionLayer(NeuralLayerIntf perceptionLayer);
-    NeuralLayerIntf getPerceptionLayer();
-
-    void setHiddenLayer(NeuralLayerIntf hiddenLayer);
-    NeuralLayerIntf getHiddenLayer();
-
-    void setOutputLayer(NeuralLayerIntf outputLayer);
+//    void setPerceptionLayer(NeuralLayerIntf perceptionLayer);
+//    NeuralLayerIntf getPerceptionLayer();
+//
+//    void setHiddenLayer(NeuralLayerIntf hiddenLayer);
+//    NeuralLayerIntf getHiddenLayer();
+//
+//    void setOutputLayer(NeuralLayerIntf outputLayer);
 //    NeuralLayerIntf getOutputLayer();
 
 //    NeuralLayerIntf getInputLayer();
@@ -37,5 +37,4 @@ public interface NeuralNetIntf {
     void applyLearning();
     void initializeLearning();
     void train(double[][] inputs, double[][]expected, int iterationLimit);
-//    void train(double[][] inputs, double[]expected, int iterationLimit);
 }
