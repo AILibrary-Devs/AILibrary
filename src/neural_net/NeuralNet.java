@@ -48,8 +48,10 @@ public class NeuralNet implements NeuralNetIntf {
 
 //<editor-fold defaultstate="collapsed" desc="Properties">
     private ArrayList<NeuralLayerIntf> layers;
+
     public static final double DEFAULT_LEARNING_RATE = 0.5;
     private double learningRate;
+
     private static final int INPUT_LAYER_IDX = 0;
     
     @Override
@@ -122,7 +124,9 @@ public class NeuralNet implements NeuralNetIntf {
     
     public static void runTrainingSession(NeuralNetIntf net, double[] inputData, double[] expectedData){
         setInputLayerData(net, inputData);
+        
         net.pulse();
+        
         calculateErrors(net, expectedData);
         calculateAndAppendTransformation(net);
     }

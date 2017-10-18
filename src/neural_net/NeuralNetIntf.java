@@ -12,23 +12,12 @@ import java.util.ArrayList;
  * @author kwl
  */
 public interface NeuralNetIntf {
-//    void setPerceptionLayer(NeuralLayerIntf perceptionLayer);
-//    NeuralLayerIntf getPerceptionLayer();
-//
-//    void setHiddenLayer(NeuralLayerIntf hiddenLayer);
-//    NeuralLayerIntf getHiddenLayer();
-//
-//    void setOutputLayer(NeuralLayerIntf outputLayer);
-//    NeuralLayerIntf getOutputLayer();
-
-//    NeuralLayerIntf getInputLayer();
 
     ArrayList<NeuralLayerIntf> getLayers();
+
     NeuralLayerIntf getLayer(int index);
     NeuralLayerIntf getInputLayer();
     NeuralLayerIntf getOutputLayer();
-
-
     
     double getLearningRate();
     void setLearningRate(double learningRate);
@@ -36,5 +25,6 @@ public interface NeuralNetIntf {
     void pulse();
     void applyLearning();
     void initializeLearning();
+
     void train(double[][] inputs, double[][]expected, int iterationLimit);
 }
