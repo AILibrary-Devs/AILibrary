@@ -3,17 +3,17 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Data;
+package common;
 
 /**
  *
  * @author kwl
  */
-public enum TruthTableType {
+public enum BooleanOperator {
 
     AND("AND"), OR("OR"), XOR("XOR");
 
-    private TruthTableType(String label) {
+    private BooleanOperator(String label) {
         this.label = label;
     }
 
@@ -23,8 +23,12 @@ public enum TruthTableType {
         return label;
     }
 
-    public boolean getValue(boolean one, boolean two) {
-        switch (this) {
+    public boolean operate(boolean one, boolean two) {
+        return operate(this, one, two);
+    }
+
+    public static boolean operate(BooleanOperator type, boolean one, boolean two) {
+        switch (type) {
             case AND:
                 return Boolean.logicalAnd(one, two);
             case OR:
@@ -34,4 +38,12 @@ public enum TruthTableType {
                 return Boolean.logicalXor(one, two);
         }
     }
+    
+    private static final Double TRUE_DOUBLE = 0.9;
+    private static final Double FALSE_DOUBLE = 0.1;
+
+    public static Double toDouble(Boolean value) {
+        return value ? TRUE_DOUBLE : FALSE_DOUBLE;
+    }
+
 }

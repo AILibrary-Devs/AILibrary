@@ -11,6 +11,6 @@ package Data;
  * @param <T>
  */
 public interface IODataSetPairIntf<T> {
-    public Iterable<T> getInputs();
-    public Iterable<T> getOutputs();
+    public DataSet getInputs();
+    public DataSet getOutputs();
 }
