@@ -3,10 +3,7 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/Users/kwl/Source/AI/AILibrary/src/neural_net/NeuralNetIntf.java</file>
-            <file>file:/Users/kwl/Source/AI/AILibrary/src/neural_net/NeuralNet.java</file>
-            <file>file:/Users/kwl/Source/AI/AILibrary/src/neural_net/DataSetProvider.java</file>
-            <file>file:/Users/kwl/Source/AI/AILibrary/src/neural_net/DataSetProviderIntf.java</file>
+            <file>file:/Users/kwl/Source/AI/AILibrary/src/Data/IODataSetPairIntf.java</file>
         </group>
     </open-files>
 </project-private>

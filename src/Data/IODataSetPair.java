@@ -16,25 +16,26 @@ import java.util.Arrays;
 public class IODataSetPair<T> implements IODataSetPairIntf {
 
 //<editor-fold defaultstate="collapsed" desc="Constructors and Factory Methods">
-    public IODataSetPair(DataSet<T> inputs, DataSet<T> outputs){
+//    public IODataSetPair(DataSet<T> inputs, DataSet<T> outputs){
+//        this.inputs = inputs;
+//        this.outputs = outputs;
+//    }
+    
+    public IODataSetPair(DataSet inputs, DataSet outputs){
         this.inputs = inputs;
         this.outputs = outputs;
     }
     
     public static IODataSetPair<Double> getIODataSetPairDouble(Double[] inputs, Double[] outputs){
-        return new IODataSetPair(DataSet.getDataSetDouble(inputs), DataSet.getDataSetDouble(inputs));
+//        return new IODataSetPair(DataSet.getDataSetDouble(inputs), DataSet.getDataSetDouble(inputs));
+        return new IODataSetPair(new DataSet(inputs), new DataSet(inputs));
     }
         
 //</editor-fold> 
     
 //<editor-fold defaultstate="collapsed" desc="Properties">
-    private final DataSet<T> inputs;
-    private final DataSet<T> outputs;
-    
-    @Override
-    public int size() {
-        return inputs.size();
-    }
+    private final DataSet inputs;
+    private final DataSet outputs;
     
     @Override
     public Iterable getInputs() {
