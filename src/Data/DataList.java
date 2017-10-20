@@ -11,25 +11,22 @@ import java.util.Arrays;
 /**
  *
  * @author kwl
+ * @param <E> type of the elements to be stored in the DataList
  */
-public class DataSet extends ArrayList {
+public class DataList<E> extends ArrayList<E> {
 
 //<editor-fold defaultstate="collapsed" desc="Constructors">
-    public DataSet(){}
+    public DataList(){}
     
-    public DataSet(Double[] items){
-        loadDouble(items);
-    }
-    
-    public DataSet(ArrayList items){
+    public DataList(ArrayList<E> items){
         addAll(items);
     }
-//</editor-fold>
     
-//<editor-fold defaultstate="collapsed" desc="Methods">
-    public final boolean loadDouble(Double[] items){
-        return addAll(Arrays.asList(items));
-    }
+    public static DataList asDoubles(Double[] items){
+        DataList<Double> dl = new DataList<>();
+        dl.addAll(Arrays.asList(items));
+        return dl;
+    }   
 //</editor-fold>
     
 }

@@ -9,30 +9,28 @@ package Data;
  *
  * @author kwl
  */
-public class IODataSetPair implements IODataSetPairIntf {
+public class IODataList {
 
 //<editor-fold defaultstate="collapsed" desc="Constructors and Factory Methods">
-    public IODataSetPair(DataSet inputs, DataSet outputs){
+    public IODataList(DataList inputs, DataList outputs){
         this.inputs = inputs;
         this.outputs = outputs;
     }
     
-    public static IODataSetPair getIODataSetPairDouble(Double[] inputs, Double[] outputs){
-        return new IODataSetPair(new DataSet(inputs), new DataSet(inputs));
+    public static IODataList asDoubles(Double[] inputs, Double[] outputs){
+        return new IODataList(DataList.asDoubles(inputs), DataList.asDoubles(outputs));
     }        
 //</editor-fold> 
     
 //<editor-fold defaultstate="collapsed" desc="Properties">
-    private final DataSet inputs;
-    private final DataSet outputs;
+    private final DataList inputs;
+    private final DataList outputs;
     
-    @Override
-    public DataSet getInputs() {
+    public DataList getInputs() {
         return inputs;
     }
     
-    @Override
-    public DataSet getOutputs() {
+    public DataList getOutputs() {
         return outputs;
     }
 //</editor-fold>

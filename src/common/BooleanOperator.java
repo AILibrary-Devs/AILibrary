@@ -13,16 +13,21 @@ public enum BooleanOperator {
 
     AND("AND"), OR("OR"), XOR("XOR");
 
+//<editor-fold defaultstate="collapsed" desc="Constructors">
     private BooleanOperator(String label) {
         this.label = label;
     }
+//</editor-fold>
 
+//<editor-fold defaultstate="collapsed" desc="Properties">
     private final String label;
 
     public String getLabel() {
         return label;
     }
+//</editor-fold>
 
+//<editor-fold defaultstate="collapsed" desc="Methods">
     public boolean operate(boolean one, boolean two) {
         return operate(this, one, two);
     }
@@ -38,12 +43,16 @@ public enum BooleanOperator {
                 return Boolean.logicalXor(one, two);
         }
     }
-    
+
     private static final Double TRUE_DOUBLE = 0.9;
     private static final Double FALSE_DOUBLE = 0.1;
 
     public static Double toDouble(Boolean value) {
-        return value ? TRUE_DOUBLE : FALSE_DOUBLE;
+        return toDouble(value, TRUE_DOUBLE, FALSE_DOUBLE);
     }
 
+    public static Double toDouble(Boolean value, Double trueValue, Double falseValue) {
+        return value ? trueValue : falseValue;
+    }
+//</editor-fold>
 }
