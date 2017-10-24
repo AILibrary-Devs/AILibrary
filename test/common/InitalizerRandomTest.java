@@ -36,7 +36,7 @@ public class InitalizerRandomTest {
      */
     @Test
     public void testGetValueNonParamConstructor() {
-        System.out.println("---- getValue, non-parameterized constructor");
+        System.out.println("getValue, non-parameterized constructor");
         InitializerRandom instance = new InitializerRandom();
 
         double expMinimum = InitializerRandom.DEFAULT_MINIMUM;
@@ -54,7 +54,7 @@ public class InitalizerRandomTest {
      */
     @Test
     public void testGetValueRangedConstructor() {
-        System.out.println("---- getValue, ranged constructor");
+        System.out.println("getValue, ranged constructor");
 
 
         double expMinimum = -13.1;

@@ -2,13 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/Users/kwl/Source/AI/AILibrary/src/Data/IODataList.java</file>
-            <file>file:/Users/kwl/Source/AI/AILibrary/test/Data/IODataListCollectionTest.java</file>
-            <file>file:/Users/kwl/Source/AI/AILibrary/src/Data/IODataListCollection.java</file>
-            <file>file:/Users/kwl/Source/AI/AILibrary/src/Data/DataList.java</file>
-            <file>file:/Users/kwl/Source/AI/AILibrary/test/common/BooleanOperatorTest.java</file>
-            <file>file:/Users/kwl/Source/AI/AILibrary/src/common/BooleanOperator.java</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>

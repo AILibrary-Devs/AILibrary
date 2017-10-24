@@ -36,7 +36,7 @@ public class InitalizerConstantTest {
      */
     @Test
     public void testGetValue() {
-        System.out.println("---- getValue");
+        System.out.println("getValue");
         
         double expResult = 11.1;
 

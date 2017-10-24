@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="0" hostname="Kevins-MacBook-Pro.local" name="Data.IODataListTest" skipped="0" tests="3" time="5.094" timestamp="2017-10-19T20:37:06">
+<testsuite errors="0" failures="0" hostname="Kevins-MacBook-Pro.local" name="Data.IODataListTest" skipped="0" tests="3" time="5.094" timestamp="2017-10-24T02:38:16">
   <properties>
     <property name="libs.jsp-compiler.javadoc" value="" />
     <property name="netbeans.autoupdate.country" value="CA" />
@@ -60,7 +60,7 @@
     <property name="libs.j2me_common_ant.maven-pom" value="" />
     <property name="libs.spring-webmvc3.0.maven-pom" value="" />
     <property name="libs.swing-layout.maven-pom" value="" />
-    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner Data.IODataListTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/Users/kwl/Source/AI/AILibrary/build/test/results/TEST-Data.IODataListTest.xml crashfile=/Users/kwl/Source/AI/AILibrary/build/junitvmwatcher6173659175410511292.properties propsfile=/Users/kwl/Source/AI/AILibrary/build/junit7355218998970140486.properties" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner Data.IODataListTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/Users/kwl/Source/AI/AILibrary/build/test/results/TEST-Data.IODataListTest.xml crashfile=/Users/kwl/Source/AI/AILibrary/build/junitvmwatcher5891198483850064421.properties propsfile=/Users/kwl/Source/AI/AILibrary/build/junit3637004424404431285.properties" />
     <property name="build.classes.dir" value="build/classes" />
     <property name="netbeans.accept_license_class" value="org.netbeans.license.AcceptLicense" />
     <property name="build.sysclasspath" value="ignore" />
@@ -93,6 +93,7 @@
     <property name="libs.primefaces.classpath" value="/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/enterprise/modules/ext/primefaces/primefaces-5.0.jar" />
     <property name="libs.javaee-api-6.0.classpath" value="/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/enterprise/modules/ext/javaee-api-6.0.jar" />
     <property name="libs.groovy-all.maven-pom" value="" />
+    <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16" />
     <property name="netbeans.productversion" value="NetBeans IDE 8.2 (Build 201609300101)" />
     <property name="libs.jaxws21.src" value="" />
     <property name="do.archive" value="true" />
@@ -117,6 +118,7 @@
     <property name="libs.hibernate4-persistencemodelgen.javadoc" value="" />
     <property name="libs.jaxb.javadoc" value="/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/ide/docs/jaxb-api-doc.zip" />
     <property name="libs.struts.classpath" value="/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/enterprise/modules/ext/struts/antlr-2.7.2.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/enterprise/modules/ext/struts/bsf-2.3.0.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/enterprise/modules/ext/struts/commons-beanutils-1.8.0.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/enterprise/modules/ext/struts/commons-chain-1.2.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/enterprise/modules/ext/struts/commons-digester-1.8.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/enterprise/modules/ext/struts/commons-fileupload-1.1.1.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/enterprise/modules/ext/struts/commons-io-1.1.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/enterprise/modules/ext/struts/commons-logging-1.0.4.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/enterprise/modules/ext/struts/commons-validator-1.3.1.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/enterprise/modules/ext/struts/jstl-1.0.2.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/enterprise/modules/ext/struts/oro-2.0.8.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/enterprise/modules/ext/struts/standard-1.0.6.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/enterprise/modules/ext/struts/struts-core-1.3.10.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/enterprise/modules/ext/struts/struts-el-1.3.10.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/enterprise/modules/ext/struts/struts-extras-1.3.10.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/enterprise/modules/ext/struts/struts-faces-1.3.10.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/enterprise/modules/ext/struts/struts-mailreader-dao-1.3.10.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/enterprise/modules/ext/struts/struts-scripting-1.3.10.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/enterprise/modules/ext/struts/struts-taglib-1.3.10.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/enterprise/modules/ext/struts/struts-tiles-1.3.10.jar" />
+    <property name="org.openide.awt.SwingBrowserImpl.do-not-block-awt" value="false" />
     <property name="ant.home" value="/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/extide/ant" />
     <property name="libs.junit_4.src" value="/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/platform/docs/junit-4.12-sources.jar" />
     <property name="libs.testng.classpath" value="/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/platform/modules/ext/testng-6.8.1-dist.jar" />
@@ -183,6 +185,7 @@
     <property name="test.binarytestincludes" value="" />
     <property name="libs.hibernate4-persistencemodelgen.src" value="" />
     <property name="javadoc.preview" value="true" />
+    <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16" />
     <property name="libs.jpa20-persistence.javadoc" value="/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/java/modules/ext/docs/javax.persistence-2.1.0-doc.zip" />
     <property name="java.home" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre" />
     <property name="libs.jsp-compilation.src" value="" />
@@ -198,7 +201,7 @@
     <property name="libs.restlib.classpath" value="/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/enterprise/modules/ext/jersey2/ext/asm-all-repackaged-2.2.0-b21.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/enterprise/modules/ext/jersey2/ext/cglib-2.2.0-b21.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/enterprise/modules/ext/jersey2/ext/guava-14.0.1.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/enterprise/modules/ext/jersey2/ext/hk2-api-2.2.0-b21.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/enterprise/modules/ext/jersey2/ext/hk2-locator-2.2.0-b21.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/enterprise/modules/ext/jersey2/ext/hk2-utils-2.2.0-b21.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/enterprise/modules/ext/jersey2/ext/javax.annotation-api-1.2.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/enterprise/modules/ext/jersey2/ext/javax.inject-2.2.0-b21.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/enterprise/modules/ext/jersey2/ext/javax.servlet-api-3.0.1.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/enterprise/modules/ext/jersey2/ext/jaxb-api-2.2.7.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/enterprise/modules/ext/jersey2/ext/jersey-entity-filtering-2.5.1.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/enterprise/modules/ext/jersey2/ext/jersey-media-moxy-2.5.1.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/enterprise/modules/ext/jersey2/ext/org.osgi.core-4.2.0.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/enterprise/modules/ext/jersey2/ext/osgi-resource-locator-1.0.1.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/enterprise/modules/ext/jersey2/ext/persistence-api-1.0.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/enterprise/modules/ext/jersey2/ext/validation-api-1.1.0.Final.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/enterprise/modules/ext/jersey2/jersey-client.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/enterprise/modules/ext/jersey2/jersey-common.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/enterprise/modules/ext/jersey2/jersey-container-servlet.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/enterprise/modules/ext/jersey2/jersey-container-servlet-core.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/enterprise/modules/ext/jersey2/jersey-server.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/java/modules/ext/eclipselink/eclipselink.jar" />
     <property name="libs.MySQLDriver.maven-pom" value="" />
     <property name="libs.hibernate4-persistence.javadoc" value="/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/java/modules/ext/docs/javax.persistence-2.1.0-doc.zip" />
-    <property name="http.nonProxyHosts" value="localhost|127.0.0.1|Kevins-MacBook-Pro.local" />
+    <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16" />
     <property name="libs.junit_4.javadoc" value="/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/platform/docs/junit-4.12-javadoc.jar" />
     <property name="libs.EclipseLink-GlassFish-v3.maven-pom" value="" />
     <property name="libs.javaee-web-api-6.0.maven-pom" value="" />
@@ -287,8 +290,8 @@
     <property name="javadoc.version" value="false" />
     <property name="libs.MySQLDriver.javadoc" value="" />
     <property name="org.openide.version" value="deprecated" />
-    <property name="source.encoding" value="UTF-8" />
     <property name="platform.java" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/bin/java" />
+    <property name="source.encoding" value="UTF-8" />
     <property name="ap.cmd.line.internal" value="" />
     <property name="libs.eclipselinkmodelgen.maven-pom" value="" />
     <property name="libs.jsp-compilation-syscp.javadoc" value="" />
@@ -306,13 +309,13 @@
     <property name="do.depend" value="false" />
     <property name="dist.javadoc.dir" value="dist/javadoc" />
     <property name="libs.j2me_common_ant.classpath" value="/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/mobility/modules/org-netbeans-modules-j2me-common-ant.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/java/modules/org-netbeans-modules-classfile.jar" />
-    <property name="libs.spring-webmvc3.0.classpath" value="/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/java/modules/ext/spring-3.0/spring-webmvc-3.2.7.RELEASE.jar" />
     <property name="libs.swing-layout.classpath" value="/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/platform/modules/ext/swing-layout-1.0.4.jar" />
+    <property name="libs.spring-webmvc3.0.classpath" value="/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/java/modules/ext/spring-3.0/spring-webmvc-3.2.7.RELEASE.jar" />
     <property name="libs.javaee-web-api-7.0.maven-pom" value="" />
     <property name="libs.restlib.src" value="" />
     <property name="javac.source" value="1.8" />
-    <property name="build.generated.dir" value="build/generated" />
     <property name="ant.file.AILibrary-impl" value="/Users/kwl/Source/AI/AILibrary/nbproject/build-impl.xml" />
+    <property name="build.generated.dir" value="build/generated" />
     <property name="line.separator" value="&#xa;" />
     <property name="java.specification.version" value="1.8" />
     <property name="java.vm.info" value="mixed mode" />
@@ -340,35 +343,35 @@
     <property name="dist.dir" value="dist" />
     <property name="libs.groovy-all.javadoc" value="" />
     <property name="testng.debug.mode" value="" />
-    <property name="libs.groovy-all.classpath" value="/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/groovy/modules/ext/groovy-all.jar" />
     <property name="javac.fork" value="true" />
+    <property name="libs.groovy-all.classpath" value="/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/groovy/modules/ext/groovy-all.jar" />
     <property name="java.awt.printerjob" value="sun.lwawt.macosx.CPrinterJob" />
     <property name="default.javac.source" value="1.8" />
     <property name="debug-transport-by-os" value="dt_socket" />
-    <property name="sun.jnu.encoding" value="UTF-8" />
     <property name="libs.MySQLDriver.src" value="" />
-    <property name="java.runtime.version" value="1.8.0_121-b13" />
+    <property name="sun.jnu.encoding" value="UTF-8" />
     <property name="build.test.results.dir" value="build/test/results" />
+    <property name="java.runtime.version" value="1.8.0_121-b13" />
     <property name="jna.platform.library.path" value="/usr/lib:/usr/lib" />
     <property name="default.javac.target" value="1.8" />
     <property name="libs.junit_4.classpath" value="/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/platform/modules/ext/junit-4.12.jar" />
     <property name="user.timezone" value="" />
     <property name="nb.junit.single" value="false" />
-    <property name="libs.javaee-endorsed-api-6.0.maven-pom" value="" />
     <property name="libs.JAVADB_DRIVER_LABEL.javadoc" value="" />
+    <property name="libs.javaee-endorsed-api-6.0.maven-pom" value="" />
     <property name="netbeans.dirs" value="/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/nb:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/ergonomics:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/ide:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/extide:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/java:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/apisupport:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/webcommon:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/websvccommon:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/enterprise:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/mobility:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/profiler:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/python:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/php:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/identity:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/harness:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/cnd:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/cndext:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/dlight:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/groovy:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/extra:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/javacard:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/javafx:" />
-    <property name="libs.jstl.javadoc" value="/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/enterprise/docs/javaee-doc-api.jar" />
     <property name="libs.jsf20.javadoc" value="/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/enterprise/docs/javaee-doc-api.jar" />
+    <property name="libs.jstl.javadoc" value="/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/enterprise/docs/javaee-doc-api.jar" />
     <property name="java.ext.dirs" value="/Users/kwl/Library/Java/Extensions:/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/ext:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java" />
     <property name="libs.metro.src" value="" />
     <property name="libs.absolutelayout.classpath" value="/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/java/modules/ext/AbsoluteLayout.jar" />
     <property name="excludes" value="" />
-    <property name="libs.metro.classpath" value="/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/ide/modules/ext/jaxb/activation.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/enterprise/modules/ext/metro/webservices-api.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/enterprise/modules/ext/metro/webservices-extra-api.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/enterprise/modules/ext/metro/webservices-extra.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/enterprise/modules/ext/metro/webservices-rt.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/enterprise/modules/ext/metro/webservices-tools.jar" />
     <property name="libs.restlib.maven-pom" value="" />
+    <property name="libs.metro.classpath" value="/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/ide/modules/ext/jaxb/activation.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/enterprise/modules/ext/metro/webservices-api.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/enterprise/modules/ext/metro/webservices-extra-api.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/enterprise/modules/ext/metro/webservices-extra.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/enterprise/modules/ext/metro/webservices-rt.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/enterprise/modules/ext/metro/webservices-tools.jar" />
     <property name="libs.jpa2-persistence.javadoc" value="/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/java/modules/ext/docs/javax.persistence-2.1.0-doc.zip" />
     <property name="libs.DataBindingME.javadoc" value="/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/mobility/modules/docs/netbeans_databindingme-api.zip" />
-    <property name="apple.laf.useScreenMenuBar" value="true" />
     <property name="java.class.path" value="/Users/kwl/Source/AI/AILibrary/build/classes:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/platform/modules/ext/junit-4.12.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/platform/modules/ext/hamcrest-core-1.3.jar:/Users/kwl/Source/AI/AILibrary/build/test/classes:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/extide/ant/lib/ant-launcher.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/extide/ant/lib/ant.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/extide/ant/lib/ant-junit.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/extide/ant/lib/ant-junit4.jar" />
+    <property name="apple.laf.useScreenMenuBar" value="true" />
     <property name="addExports:java.desktop/java.awt.peer" value="ALL-UNNAMED" />
     <property name="addExports:java.desktop/com.sun.beans.editors" value="ALL-UNNAMED" />
     <property name="libs.absolutelayout.src" value="" />
@@ -384,10 +387,10 @@
     <property name="libs.restlib.javadoc" value="" />
     <property name="libs.JAXB-ENDORSED.classpath" value="/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/ide/modules/ext/jaxb/api/jaxb-api.jar" />
     <property name="nb.internal.action.name" value="test" />
-    <property name="libs.javaee-api-7.0.javadoc" value="/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/enterprise/docs/javaee-doc-api.jar" />
     <property name="libs.eclipselink.classpath" value="/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/java/modules/ext/eclipselink/eclipselink.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/java/modules/ext/eclipselink/javax.persistence_2.1.0.v201304241213.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/java/modules/ext/eclipselink/org.eclipse.persistence.jpa.jpql_2.5.2.v20140319-9ad6abd.jar" />
-    <property name="libs.beans-binding.javadoc" value="/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/java/docs/beansbinding-1.2.1-doc.zip" />
+    <property name="libs.javaee-api-7.0.javadoc" value="/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/enterprise/docs/javaee-doc-api.jar" />
     <property name="java.awt.graphicsenv" value="sun.awt.CGraphicsEnvironment" />
+    <property name="libs.beans-binding.javadoc" value="/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/java/docs/beansbinding-1.2.1-doc.zip" />
     <property name="java.vm.vendor" value="Oracle Corporation" />
     <property name="libs.CopyLibs.classpath" value="/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/java/ant/extra/org-netbeans-modules-java-j2seproject-copylibstask.jar" />
     <property name="libs.spring-framework300.classpath" value="/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/ide/modules/org-apache-commons-logging.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/java/modules/ext/cglib-2.2.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/java/modules/ext/spring-3.0/spring-aop-3.2.7.RELEASE.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/java/modules/ext/spring-3.0/spring-aspects-3.2.7.RELEASE.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/java/modules/ext/spring-3.0/spring-beans-3.2.7.RELEASE.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/java/modules/ext/spring-3.0/spring-build-src-3.2.7.RELEASE.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/java/modules/ext/spring-3.0/spring-context-3.2.7.RELEASE.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/java/modules/ext/spring-3.0/spring-context-support-3.2.7.RELEASE.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/java/modules/ext/spring-3.0/spring-core-3.2.7.RELEASE.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/java/modules/ext/spring-3.0/spring-expression-3.2.7.RELEASE.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/java/modules/ext/spring-3.0/spring-framework-bom-3.2.7.RELEASE.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/java/modules/ext/spring-3.0/spring-instrument-3.2.7.RELEASE.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/java/modules/ext/spring-3.0/spring-instrument-tomcat-3.2.7.RELEASE.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/java/modules/ext/spring-3.0/spring-jdbc-3.2.7.RELEASE.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/java/modules/ext/spring-3.0/spring-jms-3.2.7.RELEASE.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/java/modules/ext/spring-3.0/spring-orm-3.2.7.RELEASE.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/java/modules/ext/spring-3.0/spring-oxm-3.2.7.RELEASE.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/java/modules/ext/spring-3.0/spring-struts-3.2.7.RELEASE.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/java/modules/ext/spring-3.0/spring-test-3.2.7.RELEASE.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/java/modules/ext/spring-3.0/spring-tx-3.2.7.RELEASE.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/java/modules/ext/spring-3.0/spring-web-3.2.7.RELEASE.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/java/modules/ext/spring-3.0/spring-webmvc-3.2.7.RELEASE.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/java/modules/ext/spring-3.0/spring-webmvc-portlet-3.2.7.RELEASE.jar" />
@@ -397,14 +400,14 @@
     <property name="libs.hibernate4-persistence.classpath" value="/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/java/modules/ext/hibernate4/antlr-2.7.7.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/java/modules/ext/hibernate4/c3p0-0.9.2.1.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/java/modules/ext/hibernate4/hibernate-c3p0-4.3.1.Final.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/java/modules/ext/hibernate4/mchange-commons-java-0.2.3.4.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/java/modules/ext/hibernate4/dom4j-1.6.1.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/java/modules/ext/hibernate4/ehcache-core-2.4.3.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/java/modules/ext/hibernate4/hibernate-ehcache-4.3.1.Final.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/java/modules/ext/hibernate4/hibernate-core-4.3.1.Final.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/java/modules/ext/hibernate4/jboss-logging-3.1.3.GA.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/java/modules/ext/hibernate4/hibernate-commons-annotations-4.0.4.Final.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/java/modules/ext/hibernate4/hibernate-entitymanager-4.3.1.Final.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/java/modules/ext/hibernate4/javassist-3.18.1-GA.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/java/modules/ext/hibernate4/jboss-transaction-api_1.2_spec-1.0.0.Final.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/java/modules/ext/hibernate4/slf4j-api-1.6.1.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/java/modules/ext/hibernate4/slf4j-simple-1.6.1.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/java/modules/ext/hibernate4/hibernate-jpa-2.1-api-1.0.0.Final.jar" />
     <property name="libs.JAXB-ENDORSED.src" value="" />
     <property name="dist.archive.excludes" value="" />
-    <property name="libs.DataBindingME-PIM.src" value="/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/mobility/sources/netbeans_databindingme_pim-src.zip" />
     <property name="libs.testng.javadoc" value="/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/platform/docs/testng-6.8.1-javadoc.zip" />
+    <property name="libs.DataBindingME-PIM.src" value="/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/mobility/sources/netbeans_databindingme_pim-src.zip" />
     <property name="libs.PostgreSQLDriver.classpath" value="/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/ide/modules/ext/postgresql-9.4.1209.jar" />
     <property name="libs.jsf12.maven-pom" value="" />
     <property name="libs.hibernate4-persistencemodelgen.classpath" value="/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/java/modules/ext/hibernate4/hibernate-jpamodelgen-4.3.1.Final.jar" />
     <property name="annotation.processing.source.output" value="build/generated-sources/ap-source-output" />
-    <property name="libs.CopyLibs.src" value="" />
     <property name="build.dir" value="build" />
+    <property name="libs.CopyLibs.src" value="" />
     <property name="libs.jsp-compilation.classpath" value="/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/extide/ant/lib/ant.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/enterprise/modules/ext/servlet3.1-jsp2.3-api.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/enterprise/modules/ext/glassfish-jspparser-4.0.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/enterprise/modules/ext/jsf-2_2/javax.faces.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/enterprise/modules/ext/jstl-api.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/extide/ant/lib/ant-launcher.jar" />
     <property name="addExports:java.desktop/apple.laf" value="ALL-UNNAMED" />
     <property name="ant.version" value="Apache Ant(TM) version 1.9.7 compiled on April 9 2016" />
@@ -417,7 +420,7 @@
     <property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit" />
     <property name="libs.javaee-web-api-7.0.javadoc" value="/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/enterprise/docs/javaee-doc-api.jar" />
   </properties>
-  <testcase classname="Data.IODataListTest" name="testAsDoubles" time="0.002" />
+  <testcase classname="Data.IODataListTest" name="testAsDoubles" time="0.003" />
   <testcase classname="Data.IODataListTest" name="testGetOutputs" time="0.0" />
   <testcase classname="Data.IODataListTest" name="testGetInputs" time="0.0" />
   <system-out><![CDATA[-- IODataList: START

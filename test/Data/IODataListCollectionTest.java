@@ -43,12 +43,6 @@ public class IODataListCollectionTest {
     public void tearDown() {
     }
 
-//        public IODataListCollection(ArrayList<IODataList> dataSetPairs) {
-//        this.addAll(dataSetPairs);
-//    }
-
-    
-    
     /**
      * Test of Constructor(IODataList), of class IODataListCollection.
      */
@@ -72,7 +66,7 @@ public class IODataListCollectionTest {
         
         for (int i = 0; i < iodl.getOutputs().size(); i++) {
             actual = (Double)iodl.getOutputs().get(i);
-            assertEquals(actual, id[i]);
+            assertEquals(actual, od[i]);
         }
     }
     
@@ -81,13 +75,13 @@ public class IODataListCollectionTest {
      */
     @Test
     public void testGetTruthTable() {
-        System.out.println("getTruthTable");
-        BooleanOperator operator = null;
-        IODataListCollection expResult = null;
-        IODataListCollection result = IODataListCollection.getTruthTable(operator);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+//        System.out.println("getTruthTable");
+//        BooleanOperator operator = null;
+//        IODataListCollection expResult = null;
+//        IODataListCollection result = IODataListCollection.getTruthTable(operator);
+//        assertEquals(expResult, result);
+//        // TODO review the generated test code and remove the default call to fail.
+//        fail("The test case is a prototype.");
     }
     
 }

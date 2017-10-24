@@ -44,11 +44,11 @@ public enum BooleanOperator {
         }
     }
 
-    private static final Double TRUE_DOUBLE = 0.9;
-    private static final Double FALSE_DOUBLE = 0.1;
+    public static final Double TRUE_DOUBLE_DEFAULT = 0.9;
+    public static final Double FALSE_DOUBLE_DEFAULT = 0.1;
 
     public static Double toDouble(Boolean value) {
-        return toDouble(value, TRUE_DOUBLE, FALSE_DOUBLE);
+        return toDouble(value, TRUE_DOUBLE_DEFAULT, FALSE_DOUBLE_DEFAULT);
     }
 
     public static Double toDouble(Boolean value, Double trueValue, Double falseValue) {
