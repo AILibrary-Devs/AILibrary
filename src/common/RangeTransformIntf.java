@@ -10,9 +10,6 @@ package common;
  * @author kwl
  */
 public interface RangeTransformIntf {
-//    public double applyTransform(double value);
     public double transform(double value);    
-
-//    public double applyDerivative(double value);
     public double derivative(double value);    
 }

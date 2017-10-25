@@ -13,6 +13,7 @@ import java.util.Arrays;
  *
  * @author kwl
  */
+//public class IODataListCollection<IODataList> extends ArrayList<IODataList> {
 public class IODataListCollection extends ArrayList {
     
 //<editor-fold defaultstate="collapsed" desc="Constructors and Factory Methods">
@@ -20,10 +21,11 @@ public class IODataListCollection extends ArrayList {
         this.addAll(dataSetPairs);
     }
     
-    public static IODataListCollection getTruthTable(BooleanOperator operator) {
+    public static IODataListCollection getTruthTableDouble(BooleanOperator operator) {
         ArrayList<Boolean> boolValues = new ArrayList<>(Arrays.asList(false, true));
         
-        ArrayList<IODataList> ioData = new ArrayList<>();
+        ArrayList<IODataList> ioDataLists = new ArrayList<>();
+        IODataList ioData;
         
         boolValues.forEach((b1) -> {
             ArrayList<Double> inputs = new ArrayList<>();
@@ -36,10 +38,10 @@ public class IODataListCollection extends ArrayList {
                 outputs.add(BooleanOperator.toDouble(operator.operate(b1, b2)));
             }
             
-            ioData.add(new IODataList(new DataList(inputs), new DataList(outputs)));
+            ioDataLists.add(new IODataList(new DataList<Double>(inputs), new DataList<Double>(outputs)));
         });
         
-        return new IODataListCollection(ioData);
+        return new IODataListCollection(ioDataLists);
     }
 //</editor-fold>
 }

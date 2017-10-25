@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="0" hostname="Kevins-MacBook-Pro.local" name="Data.IODataListCollectionTest" skipped="0" tests="2" time="5.109" timestamp="2017-10-24T02:38:11">
+<testsuite errors="0" failures="0" hostname="Kevins-MacBook-Pro.local" name="Data.IODataListCollectionTest" skipped="0" tests="2" time="5.152" timestamp="2017-10-24T21:01:53">
   <properties>
     <property name="libs.jsp-compiler.javadoc" value="" />
     <property name="netbeans.autoupdate.country" value="CA" />
@@ -60,7 +60,7 @@
     <property name="libs.j2me_common_ant.maven-pom" value="" />
     <property name="libs.spring-webmvc3.0.maven-pom" value="" />
     <property name="libs.swing-layout.maven-pom" value="" />
-    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner Data.IODataListCollectionTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/Users/kwl/Source/AI/AILibrary/build/test/results/TEST-Data.IODataListCollectionTest.xml crashfile=/Users/kwl/Source/AI/AILibrary/build/junitvmwatcher4558595423382833383.properties propsfile=/Users/kwl/Source/AI/AILibrary/build/junit8689523512430655594.properties" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner Data.IODataListCollectionTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/Users/kwl/Source/AI/AILibrary/build/test/results/TEST-Data.IODataListCollectionTest.xml crashfile=/Users/kwl/Source/AI/AILibrary/build/junitvmwatcher3046942890499750486.properties propsfile=/Users/kwl/Source/AI/AILibrary/build/junit60308394418616099.properties" />
     <property name="build.classes.dir" value="build/classes" />
     <property name="netbeans.accept_license_class" value="org.netbeans.license.AcceptLicense" />
     <property name="build.sysclasspath" value="ignore" />
@@ -93,7 +93,6 @@
     <property name="libs.primefaces.classpath" value="/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/enterprise/modules/ext/primefaces/primefaces-5.0.jar" />
     <property name="libs.javaee-api-6.0.classpath" value="/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/enterprise/modules/ext/javaee-api-6.0.jar" />
     <property name="libs.groovy-all.maven-pom" value="" />
-    <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16" />
     <property name="netbeans.productversion" value="NetBeans IDE 8.2 (Build 201609300101)" />
     <property name="libs.jaxws21.src" value="" />
     <property name="do.archive" value="true" />
@@ -185,7 +184,6 @@
     <property name="test.binarytestincludes" value="" />
     <property name="libs.hibernate4-persistencemodelgen.src" value="" />
     <property name="javadoc.preview" value="true" />
-    <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16" />
     <property name="libs.jpa20-persistence.javadoc" value="/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/java/modules/ext/docs/javax.persistence-2.1.0-doc.zip" />
     <property name="java.home" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre" />
     <property name="libs.jsp-compilation.src" value="" />
@@ -201,7 +199,7 @@
     <property name="libs.restlib.classpath" value="/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/enterprise/modules/ext/jersey2/ext/asm-all-repackaged-2.2.0-b21.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/enterprise/modules/ext/jersey2/ext/cglib-2.2.0-b21.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/enterprise/modules/ext/jersey2/ext/guava-14.0.1.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/enterprise/modules/ext/jersey2/ext/hk2-api-2.2.0-b21.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/enterprise/modules/ext/jersey2/ext/hk2-locator-2.2.0-b21.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/enterprise/modules/ext/jersey2/ext/hk2-utils-2.2.0-b21.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/enterprise/modules/ext/jersey2/ext/javax.annotation-api-1.2.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/enterprise/modules/ext/jersey2/ext/javax.inject-2.2.0-b21.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/enterprise/modules/ext/jersey2/ext/javax.servlet-api-3.0.1.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/enterprise/modules/ext/jersey2/ext/jaxb-api-2.2.7.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/enterprise/modules/ext/jersey2/ext/jersey-entity-filtering-2.5.1.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/enterprise/modules/ext/jersey2/ext/jersey-media-moxy-2.5.1.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/enterprise/modules/ext/jersey2/ext/org.osgi.core-4.2.0.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/enterprise/modules/ext/jersey2/ext/osgi-resource-locator-1.0.1.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/enterprise/modules/ext/jersey2/ext/persistence-api-1.0.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/enterprise/modules/ext/jersey2/ext/validation-api-1.1.0.Final.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/enterprise/modules/ext/jersey2/jersey-client.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/enterprise/modules/ext/jersey2/jersey-common.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/enterprise/modules/ext/jersey2/jersey-container-servlet.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/enterprise/modules/ext/jersey2/jersey-container-servlet-core.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/enterprise/modules/ext/jersey2/jersey-server.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/java/modules/ext/eclipselink/eclipselink.jar" />
     <property name="libs.MySQLDriver.maven-pom" value="" />
     <property name="libs.hibernate4-persistence.javadoc" value="/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/java/modules/ext/docs/javax.persistence-2.1.0-doc.zip" />
-    <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16" />
+    <property name="http.nonProxyHosts" value="localhost|127.0.0.1|Kevins-MacBook-Pro.local" />
     <property name="libs.junit_4.javadoc" value="/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/platform/docs/junit-4.12-javadoc.jar" />
     <property name="libs.EclipseLink-GlassFish-v3.maven-pom" value="" />
     <property name="libs.javaee-web-api-6.0.maven-pom" value="" />
@@ -420,9 +418,12 @@
     <property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit" />
     <property name="libs.javaee-web-api-7.0.javadoc" value="/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/enterprise/docs/javaee-doc-api.jar" />
   </properties>
-  <testcase classname="Data.IODataListCollectionTest" name="testGetTruthTable" time="0.002" />
-  <testcase classname="Data.IODataListCollectionTest" name="testConstructor" time="0.003" />
+  <testcase classname="Data.IODataListCollectionTest" name="testGetTruthTable" time="0.068" />
+  <testcase classname="Data.IODataListCollectionTest" name="testConstructor" time="0.0" />
   <system-out><![CDATA[-- IODataListCollection: START
+getTruthTable.AND
+getTruthTable.OR
+getTruthTable.XOR
 Constructor - IODataList parameter
 -- IODataListCollection: END
 

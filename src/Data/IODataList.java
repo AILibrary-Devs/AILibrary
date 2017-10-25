@@ -12,7 +12,7 @@ package Data;
 public class IODataList {
 
 //<editor-fold defaultstate="collapsed" desc="Constructors and Factory Methods">
-    public IODataList(DataList inputs, DataList outputs){
+    public IODataList(DataList<Double> inputs, DataList<Double> outputs){
         this.inputs = inputs;
         this.outputs = outputs;
     }
@@ -23,14 +23,14 @@ public class IODataList {
 //</editor-fold> 
     
 //<editor-fold defaultstate="collapsed" desc="Properties">
-    private final DataList inputs;
-    private final DataList outputs;
+    private final DataList<Double> inputs;
+    private final DataList<Double> outputs;
     
-    public DataList getInputs() {
+    public DataList<Double> getInputs() {
         return inputs;
     }
     
-    public DataList getOutputs() {
+    public DataList<Double> getOutputs() {
         return outputs;
     }
 //</editor-fold>
