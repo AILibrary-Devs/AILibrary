@@ -216,35 +216,7 @@ public class NeuralNetTest {
     private static final Double FALSE_DBL = 0.1;
     private static final Double TRUE_DBL = 0.9;
     
-    private static final int ITERATION_LIMIT = 50000;
-    
-//    /**
-//     * Test of train method, of class NeuralNet.
-//     */
-//    @Test
-//    public void testTrain_AND_TruthTable() {
-//        System.out.println("train AND TT");
-//        
-//        double[][] inputs = {{FALSE_DBL, FALSE_DBL}, {FALSE_DBL, TRUE_DBL}, {TRUE_DBL, FALSE_DBL},  {TRUE_DBL, TRUE_DBL}};
-//        double[][] expected = {{FALSE_DBL}, {FALSE_DBL}, {FALSE_DBL}, {TRUE_DBL}};
-//        
-//        int iterationLimit = 3000;
-//        Double accuracyLimit = 0.05;
-//
-//        int[] layerNodeCounts = {2, 2, 1};
-//        NeuralNet net = new NeuralNet(layerNodeCounts);
-//
-//        net.train(inputs, expected, iterationLimit);
-//
-//        //test the model
-//        for (int i = 0; i < inputs.length; i++) {
-//            try {
-//                double[] result = net.computeOutputs(inputs[i]);
-//                assertTrue(result[i] - expected[i][0] <= accuracyLimit);       
-//            } catch (Exception e) { } //bury it... for now
-//        }
-//
-//    }
+    private static final int ITERATION_LIMIT = 100000;
     
     /**
      * Test of train method, of class NeuralNet.
