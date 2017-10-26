@@ -13,7 +13,7 @@ import java.util.ArrayList;
  *
  * @author kwl
  */
-public class NeuralLayer implements NeuralLayerIntf, NeuralLayerFactoryIntf {
+public class NeuralLayer implements NeuralLayerIntf{//, NeuralLayerFactoryIntf {
 
     private static final long serialVersionUID = 0L;
     
@@ -31,8 +31,8 @@ public class NeuralLayer implements NeuralLayerIntf, NeuralLayerFactoryIntf {
     }
     
 //<editor-fold defaultstate="collapsed" desc="NeuralLayerFactoryIntf methods">
-    @Override
-    public NeuralLayerIntf getLayer(int neuronCount, InitializerIntf neuronBiasInitializer){
+//    @Override
+    public static NeuralLayerIntf getNeuralLayer(int neuronCount, InitializerIntf neuronBiasInitializer){
         return new NeuralLayer(neuronCount, neuronBiasInitializer);
     }
 //</editor-fold>
@@ -169,6 +169,17 @@ public class NeuralLayer implements NeuralLayerIntf, NeuralLayerFactoryIntf {
         return true;
     }
     
+    @Override
+    public double[] getOutputValues() {
+        double[] outputs = new double[getCount()];
+        
+        for (int i = 0; i < getCount(); i++) {
+            outputs[i] = getNeurons().get(i).getOutput();
+        }
+        
+        return outputs;
+    }
 //</editor-fold>
+
     
 }

@@ -19,6 +19,7 @@ public interface NeuralLayerIntf {
     ArrayList<Neuron> getNeurons();
     int getCount();
     boolean setOutputValues(double[] values);
+    double[] getOutputValues();
     void connectProviderLayer(NeuralLayerIntf providerLayer, InitializerIntf weightInitializer);
 
     void pulse();

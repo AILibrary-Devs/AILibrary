@@ -53,6 +53,7 @@ public class Neuron implements NeuronIntf, NeuralFactorIntf, NeuralSignalIntf, N
     }
 
 //</editor-fold>
+    
 //<editor-fold defaultstate="collapsed" desc="NeuralFactorIntf">
     private NeuralFactorIntf bias;
 

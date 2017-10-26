@@ -13,5 +13,5 @@ import common.InitializerIntf;
  */
 public interface NeuralLayerFactoryIntf {
     // generic factory method, to make creating layers easier... (may change this)
-    NeuralLayerIntf getLayer(int neuronCount, InitializerIntf neuronBiasInitializer);
+    NeuralLayerIntf getNeuralLayer(int neuronCount, InitializerIntf neuronBiasInitializer);
 }
