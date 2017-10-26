@@ -216,33 +216,107 @@ public class NeuralNetTest {
     private static final Double FALSE_DBL = 0.1;
     private static final Double TRUE_DBL = 0.9;
     
+    private static final int ITERATION_LIMIT = 50000;
+    
+//    /**
+//     * Test of train method, of class NeuralNet.
+//     */
+//    @Test
+//    public void testTrain_AND_TruthTable() {
+//        System.out.println("train AND TT");
+//        
+//        double[][] inputs = {{FALSE_DBL, FALSE_DBL}, {FALSE_DBL, TRUE_DBL}, {TRUE_DBL, FALSE_DBL},  {TRUE_DBL, TRUE_DBL}};
+//        double[][] expected = {{FALSE_DBL}, {FALSE_DBL}, {FALSE_DBL}, {TRUE_DBL}};
+//        
+//        int iterationLimit = 3000;
+//        Double accuracyLimit = 0.05;
+//
+//        int[] layerNodeCounts = {2, 2, 1};
+//        NeuralNet net = new NeuralNet(layerNodeCounts);
+//
+//        net.train(inputs, expected, iterationLimit);
+//
+//        //test the model
+//        for (int i = 0; i < inputs.length; i++) {
+//            try {
+//                double[] result = net.computeOutputs(inputs[i]);
+//                assertTrue(result[i] - expected[i][0] <= accuracyLimit);       
+//            } catch (Exception e) { } //bury it... for now
+//        }
+//
+//    }
+    
     /**
      * Test of train method, of class NeuralNet.
      */
     @Test
     public void testTrain_AND_TruthTable() {
-        System.out.println("train AND TT");
+//        System.out.println("train AND TT");
         
+        int[] layerNodeCounts = {2, 2, 1};
         double[][] inputs = {{FALSE_DBL, FALSE_DBL}, {FALSE_DBL, TRUE_DBL}, {TRUE_DBL, FALSE_DBL},  {TRUE_DBL, TRUE_DBL}};
         double[][] expected = {{FALSE_DBL}, {FALSE_DBL}, {FALSE_DBL}, {TRUE_DBL}};
         
-        int iterationLimit = 3000;
-        Double accuracyLimit = 0.05;
-
+        testTrain("AND TT", layerNodeCounts, inputs, expected, ITERATION_LIMIT, 0.1);
+    }
+    
+    /**
+     * Test of train method, of class NeuralNet.
+     */
+    @Test
+    public void testTrain_OR_TruthTable() {
+//        System.out.println("train OR TT");
+        
         int[] layerNodeCounts = {2, 2, 1};
-        NeuralNet net = new NeuralNet(layerNodeCounts);
+        double[][] inputs = {{FALSE_DBL, FALSE_DBL}, {FALSE_DBL, TRUE_DBL}, {TRUE_DBL, FALSE_DBL},  {TRUE_DBL, TRUE_DBL}};
+        double[][] expected = {{FALSE_DBL}, {TRUE_DBL}, {TRUE_DBL}, {TRUE_DBL}};
+        
+        testTrain("OR TT", layerNodeCounts, inputs, expected, ITERATION_LIMIT, 0.1);
+    }
+    
+    /**
+     * Test of train method, of class NeuralNet.
+     */
+    @Test
+    public void testTrain_XOR_TruthTable() {
+        System.out.println("train XOR TT");
+        
+        int[] layerNodeCounts = {2, 2, 1};
+        double[][] inputs = {{FALSE_DBL, FALSE_DBL}, {FALSE_DBL, TRUE_DBL}, {TRUE_DBL, FALSE_DBL},  {TRUE_DBL, TRUE_DBL}};
+        double[][] expected = {{FALSE_DBL}, {TRUE_DBL}, {TRUE_DBL}, {FALSE_DBL}};
+        
+        testTrain("XOR TT", layerNodeCounts, inputs, expected, ITERATION_LIMIT, 0.1);
+    }
+    
+    public void testTrain(String testLabel, int[] layerNodeCounts, double[][] inputValues, double[][] expectedValues, int iterationLimit, double accuracyLimit) {
+        System.out.println("train - " + testLabel);
 
-        net.train(inputs, expected, iterationLimit);
+        NeuralNet net = new NeuralNet(layerNodeCounts);
+        net.train(inputValues, expectedValues, iterationLimit);
+
+        double output, expected, variance; 
+        boolean pass = true;
+
 
         //test the model
-        for (int i = 0; i < inputs.length; i++) {
+        System.out.println("  Expected    Result      Variance");
+        for (int i = 0; i < inputValues.length; i++) {
             try {
-                double[] result = net.computeOutputs(inputs[i]);
-                assertTrue(result[i] - expected[i][0] <= accuracyLimit);       
+                double[] result = net.computeOutputs(inputValues[i]);
+                output = result[0];
+                expected = expectedValues[i][0];
+                variance = expected - output;
+
+                System.out.println(String.format("  %.5f     %.5f     %.5f", expected, output, variance));
+                pass &= (Math.abs(output - expected) <= accuracyLimit);
+//                assertTrue(Math.abs(output - expected) <= accuracyLimit);       
             } catch (Exception e) { } //bury it... for now
         }
-
+        
+        assertTrue(pass);
     }
+    
+    
 
     /**
      * Test of runTrainingSession method, of class NeuralNet.

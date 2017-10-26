@@ -186,7 +186,7 @@ public class NeuralNet implements NeuralNetIntf {
 
     private static void calculateAndAppendTransformation(NeuralNetIntf net) {
         for (int i = net.getLayers().size() - 1; i > 0; i--) {
-            net.getLayers().get(i).updateDeltasBasedOnCurrentErrors(net.getLayers().get(i + 1));
+            net.getLayers().get(i).updateDeltasBasedOnCurrentErrors(net.getLayers().get(i - 1));
         }
     }
 //</editor-fold>
