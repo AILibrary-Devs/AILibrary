@@ -3,8 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Data;
+package data;
 
+import data.IODataListCollection;
+import data.IODataList;
 import common.BooleanOperator;
 import java.util.ArrayList;
 import java.util.Arrays;
