@@ -216,20 +216,19 @@ public class NeuralNetTest {
     private static final Double FALSE_DBL = 0.1;
     private static final Double TRUE_DBL = 0.9;
     
-    private static final int ITERATION_LIMIT = 100000;
+    private static final int ITERATION_LIMIT = 10000;
+    private static final Double ACCURACY_LIMIT = 0.05;
     
     /**
      * Test of train method, of class NeuralNet.
      */
     @Test
     public void testTrain_AND_TruthTable() {
-//        System.out.println("train AND TT");
-        
-        int[] layerNodeCounts = {2, 2, 1};
+        int[] layerNodeCounts = {2, 4, 1};
         double[][] inputs = {{FALSE_DBL, FALSE_DBL}, {FALSE_DBL, TRUE_DBL}, {TRUE_DBL, FALSE_DBL},  {TRUE_DBL, TRUE_DBL}};
         double[][] expected = {{FALSE_DBL}, {FALSE_DBL}, {FALSE_DBL}, {TRUE_DBL}};
         
-        testTrain("AND TT", layerNodeCounts, inputs, expected, ITERATION_LIMIT, 0.1);
+        testTrain("AND TT", layerNodeCounts, inputs, expected, ITERATION_LIMIT, ACCURACY_LIMIT);
     }
     
     /**
@@ -237,13 +236,11 @@ public class NeuralNetTest {
      */
     @Test
     public void testTrain_OR_TruthTable() {
-//        System.out.println("train OR TT");
-        
-        int[] layerNodeCounts = {2, 2, 1};
+        int[] layerNodeCounts = {2, 4, 1};
         double[][] inputs = {{FALSE_DBL, FALSE_DBL}, {FALSE_DBL, TRUE_DBL}, {TRUE_DBL, FALSE_DBL},  {TRUE_DBL, TRUE_DBL}};
         double[][] expected = {{FALSE_DBL}, {TRUE_DBL}, {TRUE_DBL}, {TRUE_DBL}};
         
-        testTrain("OR TT", layerNodeCounts, inputs, expected, ITERATION_LIMIT, 0.1);
+        testTrain("OR TT", layerNodeCounts, inputs, expected, ITERATION_LIMIT, ACCURACY_LIMIT);
     }
     
     /**
@@ -251,13 +248,11 @@ public class NeuralNetTest {
      */
     @Test
     public void testTrain_XOR_TruthTable() {
-        System.out.println("train XOR TT");
-        
-        int[] layerNodeCounts = {2, 2, 1};
+        int[] layerNodeCounts = {2, 4, 1};
         double[][] inputs = {{FALSE_DBL, FALSE_DBL}, {FALSE_DBL, TRUE_DBL}, {TRUE_DBL, FALSE_DBL},  {TRUE_DBL, TRUE_DBL}};
         double[][] expected = {{FALSE_DBL}, {TRUE_DBL}, {TRUE_DBL}, {FALSE_DBL}};
         
-        testTrain("XOR TT", layerNodeCounts, inputs, expected, ITERATION_LIMIT, 0.1);
+        testTrain("XOR TT", layerNodeCounts, inputs, expected, ITERATION_LIMIT, ACCURACY_LIMIT);
     }
     
     public void testTrain(String testLabel, int[] layerNodeCounts, double[][] inputValues, double[][] expectedValues, int iterationLimit, double accuracyLimit) {
