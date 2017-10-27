@@ -69,6 +69,7 @@ public class NeuralNet implements NeuralNetIntf {
 //        return new NeuralNet(layerNodeCounts, new InitializerRandom(), new NeuralLayer());
 //    }    
 //</editor-fold>
+    
 //<editor-fold defaultstate="collapsed" desc="Properties">
     private ArrayList<NeuralLayerIntf> layers;
 
