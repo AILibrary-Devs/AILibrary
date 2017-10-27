@@ -32,15 +32,15 @@ public class InitalizerConstantTest {
     }
 
     /**
-     * Test of getValue method, of class InitalizerConstant.
+     * Test of getValue method, of class InitializerConstant.
      */
     @Test
     public void testGetValue() {
-        System.out.println("---- getValue");
+        System.out.println("getValue");
         
         double expResult = 11.1;
 
-        InitalizerConstant instance = new InitalizerConstant(expResult);
+        InitializerConstant instance = new InitializerConstant(expResult);
         
         double result = instance.getValue();
         assertEquals(expResult, result, 0.0);

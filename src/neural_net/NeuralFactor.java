@@ -89,7 +89,7 @@ public class NeuralFactor implements NeuralFactorIntf {
     
 //<editor-fold defaultstate="collapsed" desc="Methods">
     /**
-     * @param learningRate A coefficient applied to the computed delta as it the
+     * @param learningRate A coefficient applied to the computed delta as the
      * delta is applied to the weight property; this essentially controls how 
      * fast the model reacts to computed deviations from the exemplar values.
      */

@@ -32,15 +32,15 @@ public class InitalizerRandomTest {
     }
 
     /**
-     * Test of getValue method, of class InitalizerRandom.
+     * Test of getValue method, of class InitializerRandom.
      */
     @Test
     public void testGetValueNonParamConstructor() {
-        System.out.println("---- getValue, non-parameterized constructor");
-        InitalizerRandom instance = new InitalizerRandom();
+        System.out.println("getValue, non-parameterized constructor");
+        InitializerRandom instance = new InitializerRandom();
 
-        double expMinimum = InitalizerRandom.DEFAULT_MINIMUM;
-        double expMaximum = InitalizerRandom.DEFAULT_MAXIMUM;
+        double expMinimum = InitializerRandom.DEFAULT_MINIMUM;
+        double expMaximum = InitializerRandom.DEFAULT_MAXIMUM;
 
         double result;
         for (int i = 0; i < 2500; i++){
@@ -50,16 +50,16 @@ public class InitalizerRandomTest {
     }
     
     /**
-     * Test of getValue method, of class InitalizerRandom.
+     * Test of getValue method, of class InitializerRandom.
      */
     @Test
     public void testGetValueRangedConstructor() {
-        System.out.println("---- getValue, ranged constructor");
+        System.out.println("getValue, ranged constructor");
 
 
         double expMinimum = -13.1;
         double expMaximum = 125.5;
-        InitalizerRandom instance = new InitalizerRandom(expMinimum, expMaximum);
+        InitializerRandom instance = new InitializerRandom(expMinimum, expMaximum);
 
         double result;
         for (int i = 0; i < 2500; i++){

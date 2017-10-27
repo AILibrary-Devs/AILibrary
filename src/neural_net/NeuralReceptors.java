@@ -12,7 +12,7 @@ import java.util.Map;
  *
  * @author kwl
  */
-public class NeuralReceptor implements NeuralReceptorIntf {
+public class NeuralReceptors implements NeuralReceptorsIntf {
 
     private static final long serialVersionUID = 0L;
 
@@ -41,7 +41,7 @@ public class NeuralReceptor implements NeuralReceptorIntf {
     }
 
     @Override
-    public double getWeightedInput() {
+    public double getWeightedAggregateInput() {
         double weightedInput = 0.0;
         weightedInput = inputs.entrySet().stream().map((input) -> input.getKey().getOutput() * input.getValue().getWeight()).reduce(weightedInput, (accumulator, _item) -> accumulator + _item);
         return weightedInput;

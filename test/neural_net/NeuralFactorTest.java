@@ -34,7 +34,7 @@ public class NeuralFactorTest {
      */
     @Test
     public void testGetWeight() {
-        System.out.println("---- getWeight");
+        System.out.println("getWeight");
         double expResult = 3.0;
         NeuralFactor instance = new NeuralFactor(expResult);
         
@@ -47,7 +47,7 @@ public class NeuralFactorTest {
      */
     @Test
     public void testSetWeight() {
-        System.out.println("---- getWeight");
+        System.out.println("getWeight");
         double expResult = 2.2;
         NeuralFactor instance = new NeuralFactor(expResult);
         
@@ -65,7 +65,7 @@ public class NeuralFactorTest {
      */
     @Test
     public void testGetDelta() {
-        System.out.println("---- getDelta");
+        System.out.println("getDelta");
 
         NeuralFactor instance = new NeuralFactor(1.5);
         
@@ -79,7 +79,7 @@ public class NeuralFactorTest {
      */
     @Test
     public void testSetDelta() {
-        System.out.println("---- setDelta");
+        System.out.println("setDelta");
         NeuralFactor instance = new NeuralFactor(1.5);
         
         double expResult = NeuralFactor.DEFAULT_DELTA;
@@ -97,7 +97,7 @@ public class NeuralFactorTest {
      */
     @Test
     public void testAddDelta() {
-        System.out.println("---- addDelta");
+        System.out.println("addDelta");
         NeuralFactor instance = new NeuralFactor(1.5);
                 
         double expResult = 0.7;
@@ -121,7 +121,7 @@ public class NeuralFactorTest {
      */
     @Test
     public void testGetLastDelta() {
-        System.out.println("---- testGetLastDelta");
+        System.out.println("testGetLastDelta");
         NeuralFactor instance = new NeuralFactor(1.5);
                 
         double expResult = 1.1;
@@ -158,7 +158,7 @@ public class NeuralFactorTest {
 //        NeuralFactor instance = null;
 //        instance.applyWeightChange(learningRate);
 //        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
+        fail("The test case is a prototype.");
     }
 
     /**
@@ -166,7 +166,7 @@ public class NeuralFactorTest {
      */
     @Test
     public void testResetWeightChange() {
-        System.out.println("---- resetWeightChange");
+        System.out.println("resetWeightChange");
         NeuralFactor instance = new NeuralFactor(1.5);
                 
         double expResult = 1.1;

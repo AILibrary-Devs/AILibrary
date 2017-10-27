@@ -3,15 +3,27 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package neural_net;
+package common;
 
 /**
  *
  * @author kwl
  */
-public class Sigmoid {
+public class Sigmoid implements RangeTransformIntf {
 
     private static final long serialVersionUID = 0L;
+    
+//<editor-fold defaultstate="collapsed" desc="RangeTransformIntf">
+    @Override
+    public double transform(double value){
+        return applyTransform(value);
+    }
+
+    @Override
+    public double derivative(double value){
+        return applyDerivative(value);
+    }
+//</editor-fold>
     
 //<editor-fold defaultstate="collapsed" desc="Methods">
     /**
@@ -25,12 +37,8 @@ public class Sigmoid {
      * The standard sigmoid function is S(x) = 1 / (1 + e^(-x)), where e is
      * Euler's number.
      */
-    public static double applyTransform(double value){
+    private static double applyTransform(double value){
         return 1.0 / (1.0 + Math.exp(-value));
-    }
-    
-    public double transform(double value){
-        return applyTransform(value);
     }
     
     /**
@@ -40,12 +48,9 @@ public class Sigmoid {
      * The standard sigmoid function is S(x) = 1 / (1 + e^(-x)), where e is
      * Euler's number, and the derivative of the sigmoid function is x * (1 - x)
      */
-    public static double applyDerivative(double value){
+    private double applyDerivative(double value){
         return value * (1.0 - value);
     }
     
-    public double derivative(double value){
-        return applyDerivative(value);
-    }
 //</editor-fold>
 }
