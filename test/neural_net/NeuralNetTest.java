@@ -5,9 +5,6 @@
  */
 package neural_net;
 
-import common.InitializerIntf;
-import common.InitializerRandom;
-import java.util.ArrayList;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -213,6 +210,10 @@ public class NeuralNetTest {
 //        fail("The test case is a prototype.");
     }
 
+    
+    //https://archive.ics.uci.edu/ml/index.php
+    
+    
     private static final Double FALSE_DBL = 0.1;
     private static final Double TRUE_DBL = 0.9;
     
