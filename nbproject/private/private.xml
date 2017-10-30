@@ -5,6 +5,9 @@
         <group>
             <file>file:/Users/kwl/Source/AI/AILibrary/src/neural_net/NeuralNet.java</file>
             <file>file:/Users/kwl/Source/AI/AILibrary/test/neural_net/NeuralNetTest.java</file>
+            <file>file:/Users/kwl/Source/AI/AILibrary/src/neural_net/NeuralLayer.java</file>
+            <file>file:/Users/kwl/Source/AI/AILibrary/src/neural_net/Neuron.java</file>
+            <file>file:/Users/kwl/Source/AI/AILibrary/test/neural_net/NeuralNet_PokerHandTest.java</file>
         </group>
     </open-files>
 </project-private>
