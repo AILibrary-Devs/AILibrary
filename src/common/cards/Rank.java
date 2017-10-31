@@ -54,6 +54,10 @@ public enum Rank {
     }
     
     public double normalized(){
+        return normalized(value);
+    }
+    
+    public static double normalized(int value){
         return value / NORMALIZATION_FACTOR;
     }
 //</editor-fold>

@@ -47,6 +47,10 @@ public enum PokerHand {
     }
     
     public double normalized(){
+        return normalized(this.value);
+    }
+
+    public static double normalized(int value){
         return value / NORMALIZATION_FACTOR;
     }
 //</editor-fold>
