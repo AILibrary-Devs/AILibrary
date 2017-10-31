@@ -33,7 +33,7 @@ public class Neuron implements NeuronIntf, NeuralFactorIntf, NeuralSignalIntf, N
     private double error;
     private double lastError;
     private double lastDelta;
-    private RangeTransformIntf sigmoid;
+    private final RangeTransformIntf sigmoid;
 
     /**
      * @return the error

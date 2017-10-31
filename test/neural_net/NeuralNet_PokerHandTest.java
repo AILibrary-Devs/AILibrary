@@ -75,6 +75,7 @@ public class NeuralNet_PokerHandTest {
         return data;
     }
 
+    
     /**
      * Test of train method, of class NeuralNet.
      * https://archive.ics.uci.edu/ml/machine-learning-databases/poker/
@@ -82,7 +83,7 @@ public class NeuralNet_PokerHandTest {
      */
     @Test
     public void testPokerHand() throws Exception {//String testLabel, double[][] inputValues, double[][] expectedValues, int iterationLimit, double accuracyLimit) {
-
+//        final double scaleFactor = 10.0;
         //Get file from resources folder
         ClassLoader classLoader = getClass().getClassLoader();
         File file = new File(classLoader.getResource("neural_net/poker_hand_training_data.txt").getFile());
