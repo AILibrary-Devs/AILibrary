@@ -5,9 +5,9 @@
  */
 package neural_net;
 
-import common.cards.PokerHand;
-import common.cards.Rank;
-import common.cards.Suit;
+import cards.PokerHand;
+import cards.Rank;
+import cards.Suit;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
