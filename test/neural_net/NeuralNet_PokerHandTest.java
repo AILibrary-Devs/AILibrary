@@ -70,7 +70,7 @@ public class NeuralNet_PokerHandTest {
                 double[] input = new double[elements];
                 for (int i = 0; i < input.length; i++) {
 //                    input[i] = Integer.parseInt(list[i]);
-                    input[i] = normalized(Integer.parseInt(list[i]), i);
+                    input[i] = normalize(Integer.parseInt(list[i]), i);
                 }
 
                 if (verbose) {
@@ -88,7 +88,7 @@ public class NeuralNet_PokerHandTest {
 
     private final int POKER_HAND_VALUE = 10;
 
-    private double normalized(int value, int type) {
+    private double normalize(int value, int type) {
         if (type == POKER_HAND_VALUE) {
             return PokerHand.normalized(value);
         } else if ((type % 2) == 0) {   //even row = Suit
@@ -106,21 +106,30 @@ public class NeuralNet_PokerHandTest {
     @Test
     public void testPokerHand() throws Exception {//String testLabel, double[][] inputValues, double[][] expectedValues, int iterationLimit, double accuracyLimit) {
         //Get file from resources folder
-        ArrayList<double[]> trainingData = getDataFromFile("neural_net/poker_hand_training_data.txt", 11, 200, true);
+        ArrayList<double[]> trainingData = getDataFromFile("neural_net/poker_hand_training_data.txt", 11, 20000, false);
 
         //create input and output arrays from training data
         double[][] trainingInputs = new double[trainingData.size()][10];
         double[][] trainingOutputs = new double[trainingData.size()][1];
 
         for (int i = 0; i < trainingInputs.length; i++) {
-            trainingInputs[i] = Arrays.copyOf(trainingData.get(i), 10);
-            trainingOutputs[i] = Arrays.copyOfRange(trainingData.get(i), 10, 10);
+            double[] ti, to;
+            
+            ti = Arrays.copyOf(trainingData.get(i), 10);
+            to = Arrays.copyOfRange(trainingData.get(i), 10, 11);
+
+            trainingInputs[i] = ti;
+            trainingOutputs[i] = to;
+
+
+//            trainingInputs[i] = Arrays.copyOf(trainingData.get(i), 10);
+//            trainingOutputs[i] = Arrays.copyOfRange(trainingData.get(i), 10, 10);
         }
 
         //train the NN
         int[] layerNodeCounts = {10, 10, 1};
         NeuralNet net = new NeuralNet(layerNodeCounts);
-        net.train(trainingInputs, trainingOutputs, 3);
+        net.train(trainingInputs, trainingOutputs, 300);
 
         //test the model ------------------------------------------------------
         ArrayList<double[]> testData = getDataFromFile("neural_net/poker_hand_test_data.txt", 11, 200, true);
