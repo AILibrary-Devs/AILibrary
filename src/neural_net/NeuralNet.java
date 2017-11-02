@@ -42,12 +42,13 @@ public class NeuralNet implements NeuralNetIntf {
     }
 
     /**
-     * Constructor - simplified; note that the 
-     * @param layerNodeCounts and array of integers that defines the number of 
-     * nodes in each layer, and implicitly by the number of entries in the array,
-     * the number of layers in the NeuralNet. Note that the "bias" values on the
-     * inter-layer node collections will be initialized to a random value between
-     * 0 (inclusive) and 1 (exclusive).
+     * Constructor - simplified; note that the
+     *
+     * @param layerNodeCounts and array of integers that defines the number of
+     * nodes in each layer, and implicitly by the number of entries in the
+     * array, the number of layers in the NeuralNet. Note that the "bias" values
+     * on the inter-layer node collections will be initialized to a random value
+     * between 0 (inclusive) and 1 (exclusive).
      */
     public NeuralNet(int[] layerNodeCounts) {
         InitializerIntf neuronBiasInitializer = new InitializerRandom();
@@ -69,7 +70,6 @@ public class NeuralNet implements NeuralNetIntf {
 //        return new NeuralNet(layerNodeCounts, new InitializerRandom(), new NeuralLayer());
 //    }    
 //</editor-fold>
-    
 //<editor-fold defaultstate="collapsed" desc="Properties">
     private ArrayList<NeuralLayerIntf> layers;
 
@@ -145,16 +145,16 @@ public class NeuralNet implements NeuralNetIntf {
     }
 //</editor-fold>
 
-    public double[] computeOutputs(double[] inputData) throws Exception{
+    public double[] computeOutputs(double[] inputData) throws Exception {
         if (inputData.length != getInputLayer().getCount()) {
             throw new Exception("Input data size does not match input layer size.");
         }
-        
+
         getInputLayer().setOutputValues(inputData);
         pulse();
-       return getOutputLayer().getOutputValues();
+        return getOutputLayer().getOutputValues();
     }
-    
+
     public static void runTrainingSession(NeuralNetIntf net, double[] inputData, double[] expectedData) {
         setInputLayerData(net, inputData);
 

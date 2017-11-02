@@ -114,16 +114,13 @@ public class NeuralNet_PokerHandTest {
 
         for (int i = 0; i < trainingInputs.length; i++) {
             double[] ti, to;
-            
-            ti = Arrays.copyOf(trainingData.get(i), 10);
-            to = Arrays.copyOfRange(trainingData.get(i), 10, 11);
-
-            trainingInputs[i] = ti;
-            trainingOutputs[i] = to;
-
-
-//            trainingInputs[i] = Arrays.copyOf(trainingData.get(i), 10);
-//            trainingOutputs[i] = Arrays.copyOfRange(trainingData.get(i), 10, 10);
+//            ti = Arrays.copyOf(trainingData.get(i), 10);
+//            to = Arrays.copyOfRange(trainingData.get(i), 10, 11);
+//
+//            trainingInputs[i] = ti;
+//            trainingOutputs[i] = to;
+            trainingInputs[i] = Arrays.copyOf(trainingData.get(i), 10);
+            trainingOutputs[i] = Arrays.copyOfRange(trainingData.get(i), 10, 11);
         }
 
         //train the NN
