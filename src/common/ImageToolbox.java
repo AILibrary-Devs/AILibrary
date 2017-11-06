@@ -16,8 +16,8 @@ import javax.imageio.ImageIO;
  * @author kwl
  */
 public class ImageToolbox {
-    
-        /**
+
+    /**
      * @param resourcePath fully qualified location of the image in the compiled
      * binary file/library
      * @return an Image
@@ -33,41 +33,56 @@ public class ImageToolbox {
         }
         return image;
     }
-    
-    public static Image[] getSubimageArray(Image image, int xCount, int yCount){
+
+    public static Image[] getSubimageArray(Image image, int xCount, int yCount) {
         Image[] images = new Image[xCount * yCount];
         Image[][] imgs = getSubimageArrays(image, xCount, yCount);
-        
+
         int idx = 0;
-        for (Image[] ii : imgs){
-            for (Image i : ii){
+        for (Image[] ii : imgs) {
+            for (Image i : ii) {
                 images[idx] = i;
                 idx++;
             }
         }
-        
+
         return images;
     }
-    
-    public static Image[][] getSubimageArrays(Image image, int xCount, int yCount){
+
+    public static Image[][] getSubimageArrays(Image image, int xCount, int yCount) {
         Image[][] images = new Image[xCount][yCount];
         BufferedImage bi = (BufferedImage) image;
-        
+
         int width = bi.getWidth() / xCount;
         int height = bi.getHeight() / yCount;
-        
+
         for (int i = 0; i < xCount; i++) {
             for (int j = 0; j < yCount; j++) {
                 images[i][j] = bi.getSubimage(i * width, j * height, width, height);
             }
         }
-        
+
         return images;
     }
-    
-//    public static void test(){
-//        BufferedImage bi = new BufferedImage(1, 1, 1);
-//        bi.
-//    }
-    
+
+//        int width = image.getWidth();
+//        int height = image.getHeight();
+//        int[][] array = new int[height][width];
+//
+//        for (int row = 0; row < height; row++) {
+//            for (int col = 0; col < width; col++) {
+//                array[row][col] = image.getRGB(col, row);
+//            }
+//        }
+    public static int[][] imageToIntRowColArrays(BufferedImage image) {
+        int[][] result = new int[image.getHeight()][image.getWidth()];
+
+        for (int row = 0; row < result.length; row++) {
+            for (int col = 0; col < result[row].length; col++) {
+                result[row][col] = image.getRGB(col, row);
+            }
+        }
+        return result;
+    }
+
 }

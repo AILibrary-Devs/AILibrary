@@ -3,11 +3,8 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/Users/kwl/Source/AI/AILibrary/src/neural_net/NeuralNet.java</file>
-            <file>file:/Users/kwl/Source/AI/AILibrary/src/neural_net/NeuralLayer.java</file>
             <file>file:/Users/kwl/Source/AI/AILibrary/test/neural_net/mnist_train0.jpg</file>
-            <file>file:/Users/kwl/Source/AI/AILibrary/src/common/ImageToolbox.java</file>
-            <file>file:/Users/kwl/Source/AI/AILibrary/src/cards/PokerHand.java</file>
+            <file>file:/Users/kwl/Source/AI/AILibrary/test/neural_net/NeuralNet_HandWritingTest.java</file>
             <file>file:/Users/kwl/Source/AI/AILibrary/test/common/ImageToolboxTest.java</file>
             <file>file:/Users/kwl/Source/AI/AILibrary/test/neural_net/NeuralNet_PokerHandTest.java</file>
         </group>

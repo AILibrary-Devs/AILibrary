@@ -5,6 +5,7 @@
  */
 package common;
 
+import java.awt.Color;
 import java.awt.Image;
 import java.awt.image.BufferedImage;
 import org.junit.After;
@@ -50,9 +51,10 @@ public class ImageToolboxTest {
         Image result = ImageToolbox.loadImageFromResource(resourcePath);
 
         BufferedImage bi = (BufferedImage) result;
+//        Color clr = new Color();
 
-        System.out.println(bi.getHeight());
-        System.out.println(bi.getWidth());
+//        System.out.println(bi.getHeight());
+//        System.out.println(bi.getWidth());
 
 //        assertEquals(expResult, result);
     }
@@ -74,10 +76,8 @@ public class ImageToolboxTest {
         for (Image img : images) {
             BufferedImage bi = (BufferedImage) img;
 
-            System.out.println(bi.getHeight());
-            System.out.println(bi.getWidth());
-            
-//            bi.
+//            System.out.println(bi.getHeight());
+//            System.out.println(bi.getWidth());
         }
 
 //        assertArrayEquals(expResult, result);
@@ -100,12 +100,41 @@ public class ImageToolboxTest {
         for (int i = 0; i < images.length; i++) {
             for (int j = 0; j < images[i].length; j++) {
                 BufferedImage bi = (BufferedImage) images[i][j];
-                System.out.printf("[%d, %d] (%d, %d)\n", i, j, bi.getWidth(), bi.getHeight());
+//                System.out.printf("[%d, %d] (%d, %d)\n", i, j, bi.getWidth(), bi.getHeight());
             }
         }
 
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
     }
+    
+//        private static int[][] imageToRowColInt(BufferedImage image) {
+
+      /**
+     * Test of getSubimageArrays method, of class ImageToolbox.
+     */
+    @Test
+    public void testImageToIntRowColArrays() {
+        System.out.println("imageToIntRowColArrays");
+
+        int xCount = 31;
+        int yCount = 32;
+        String resourcePath = "neural_net/mnist_test0.jpg";
+
+        Image srcImage = ImageToolbox.loadImageFromResource(resourcePath);
+        Image[] images = ImageToolbox.getSubimageArray(srcImage, xCount, yCount);
+
+        Image image = images[0];
+        int[][] imageArrays = ImageToolbox.imageToIntRowColArrays((BufferedImage) images[0]);
+        
+        for (int row = 0; row < imageArrays.length; row++) {
+            for (int col = 0; col < imageArrays[row].length; col++) {
+                System.out.printf("[%d, %d] %d\n", row, col, imageArrays[row][col]);
+            }
+        }
+//        // TODO review the generated test code and remove the default call to fail.
+//        fail("The test case is a prototype.");
+    }
+  
 
 }
