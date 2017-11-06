@@ -126,10 +126,12 @@ public class ImageToolboxTest {
 
         Image image = images[0];
         int[][] imageArrays = ImageToolbox.imageToIntRowColArrays((BufferedImage) images[0]);
+        int[] argb;
         
         for (int row = 0; row < imageArrays.length; row++) {
             for (int col = 0; col < imageArrays[row].length; col++) {
-                System.out.printf("[%d, %d] %d\n", row, col, imageArrays[row][col]);
+                argb = ImageToolbox.getARGB(imageArrays[row][col]);
+                System.out.printf("[%d, %d] %d : %s : [A %d] [R %d] [G %d] [B %d] \n", row, col, imageArrays[row][col], Integer.toHexString(imageArrays[row][col]), argb[0], argb[1], argb[2], argb[3]);
             }
         }
 //        // TODO review the generated test code and remove the default call to fail.

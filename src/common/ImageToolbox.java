@@ -65,15 +65,6 @@ public class ImageToolbox {
         return images;
     }
 
-//        int width = image.getWidth();
-//        int height = image.getHeight();
-//        int[][] array = new int[height][width];
-//
-//        for (int row = 0; row < height; row++) {
-//            for (int col = 0; col < width; col++) {
-//                array[row][col] = image.getRGB(col, row);
-//            }
-//        }
     public static int[][] imageToIntRowColArrays(BufferedImage image) {
         int[][] result = new int[image.getHeight()][image.getWidth()];
 
@@ -84,5 +75,37 @@ public class ImageToolbox {
         }
         return result;
     }
+    
+    public final static int ARGB_MASK_ALPHA = 0xff000000;
+    public final static int ARGB_MASK_RED = 0x00ff0000;
+    public final static int ARGB_MASK_GREEN = 0x0000ff00;
+    public final static int ARGB_MASK_BLUE = 0x000000ff;
+
+    public final static int ARGB_ALPHA = 0;
+    public final static int ARGB_RED = 1;
+    public final static int ARGB_GREEN = 2;
+    public final static int ARGB_BLUE = 3;
+    
+    
+    public static int[] getARGB(int color){
+        int[] argb = new int[4];
+        
+        argb[ARGB_ALPHA] = (color & ARGB_MASK_ALPHA) >> 24;
+        argb[ARGB_RED] = (color & ARGB_MASK_RED) >> 16;
+        argb[ARGB_GREEN] = (color & ARGB_MASK_GREEN) >> 8;
+        argb[ARGB_BLUE] = (color & ARGB_MASK_BLUE);
+        
+        return argb;
+    }
+        
+
+    public static int getARGBSum(int[] argb){
+        return argb[ARGB_RED] + argb[ARGB_GREEN] + argb[ARGB_BLUE];
+    }
+        
+    public static int getARGBSum(int color){
+        return getARGBSum(getARGB(color));
+    }
+        
 
 }
