@@ -6,7 +6,7 @@
 package neural_net;
 
 import common.RangeTransformIntf;
-import common.Sigmoid;
+import common.SigmoidTransform;
 import java.util.Map;
 
 /**
@@ -19,7 +19,7 @@ public class Neuron implements NeuronIntf, NeuralFactorIntf, NeuralSignalIntf, N
 
 //<editor-fold defaultstate="collapsed" desc="Constructors"> 
     {
-        sigmoid = new Sigmoid();
+        sigmoid = new SigmoidTransform();
     }
 
     public Neuron(double biasWeight) {

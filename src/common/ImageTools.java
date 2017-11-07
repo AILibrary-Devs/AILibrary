@@ -15,7 +15,7 @@ import javax.imageio.ImageIO;
  *
  * @author kwl
  */
-public class ImageToolbox {
+public class ImageTools {
 
     /**
      * @param resourcePath fully qualified location of the image in the compiled
@@ -106,6 +106,8 @@ public class ImageToolbox {
     public static int getARGBSum(int color){
         return getARGBSum(getARGB(color));
     }
+    
+//    public static double get
         
 
 }

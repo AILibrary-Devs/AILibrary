@@ -8,7 +8,7 @@ package neural_net;
 import common.InitializerRandom;
 import common.InitializerIntf;
 import common.RangeTransformIntf;
-import common.Sigmoid;
+import common.SigmoidTransform;
 import java.util.ArrayList;
 
 /**
@@ -174,7 +174,7 @@ public class NeuralNet implements NeuralNetIntf {
     }
 
     private static void calculateErrors(NeuralNetIntf net, double[] expectedData) {
-        RangeTransformIntf sigmoid = new Sigmoid();
+        RangeTransformIntf sigmoid = new SigmoidTransform();
 
         //update the output layer from the "known" (expected) answers...
         net.getOutputLayer().updateErrorsFromExpectedResults(expectedData, sigmoid);

@@ -9,7 +9,7 @@ package common;
  *
  * @author kwl
  */
-public class Sigmoid implements RangeTransformIntf {
+public class SigmoidTransform implements RangeTransformIntf {
 
     private static final long serialVersionUID = 0L;
     

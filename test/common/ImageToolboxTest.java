@@ -41,14 +41,14 @@ public class ImageToolboxTest {
     }
 
     /**
-     * Test of loadImageFromResource method, of class ImageToolbox.
+     * Test of loadImageFromResource method, of class ImageTools.
      */
     @Test
     public void testLoadImageFromResource() {
         System.out.println("loadImageFromResource");
         String resourcePath = "neural_net/mnist_test0.jpg";
         Image expResult = null;
-        Image result = ImageToolbox.loadImageFromResource(resourcePath);
+        Image result = ImageTools.loadImageFromResource(resourcePath);
 
         BufferedImage bi = (BufferedImage) result;
 //        Color clr = new Color();
@@ -60,7 +60,7 @@ public class ImageToolboxTest {
     }
 
     /**
-     * Test of getSubimageArray method, of class ImageToolbox.
+     * Test of getSubimageArray method, of class ImageTools.
      */
     @Test
     public void testGetSubimageArray() {
@@ -70,8 +70,8 @@ public class ImageToolboxTest {
         int yCount = 32;
         String resourcePath = "neural_net/mnist_test0.jpg";
 
-        Image image = ImageToolbox.loadImageFromResource(resourcePath);
-        Image[] images = ImageToolbox.getSubimageArray(image, xCount, yCount);
+        Image image = ImageTools.loadImageFromResource(resourcePath);
+        Image[] images = ImageTools.getSubimageArray(image, xCount, yCount);
 
         for (Image img : images) {
             BufferedImage bi = (BufferedImage) img;
@@ -84,18 +84,18 @@ public class ImageToolboxTest {
     }
 
     /**
-     * Test of getSubimageArrays method, of class ImageToolbox.
+     * Test of getSubimageArrays method, of class ImageTools.
      */
     @Test
     public void testGetSubimageArrays() {
         System.out.println("getSubimageArray");
 
         String resourcePath = "neural_net/mnist_test0.jpg";
-        Image image = ImageToolbox.loadImageFromResource(resourcePath);
+        Image image = ImageTools.loadImageFromResource(resourcePath);
 
         int xCount = 31;
         int yCount = 32;
-        Image[][] images = ImageToolbox.getSubimageArrays(image, xCount, yCount);
+        Image[][] images = ImageTools.getSubimageArrays(image, xCount, yCount);
 
         for (int i = 0; i < images.length; i++) {
             for (int j = 0; j < images[i].length; j++) {
@@ -111,7 +111,7 @@ public class ImageToolboxTest {
 //        private static int[][] imageToRowColInt(BufferedImage image) {
 
       /**
-     * Test of getSubimageArrays method, of class ImageToolbox.
+     * Test of getSubimageArrays method, of class ImageTools.
      */
     @Test
     public void testImageToIntRowColArrays() {
@@ -121,16 +121,16 @@ public class ImageToolboxTest {
         int yCount = 32;
         String resourcePath = "neural_net/mnist_test0.jpg";
 
-        Image srcImage = ImageToolbox.loadImageFromResource(resourcePath);
-        Image[] images = ImageToolbox.getSubimageArray(srcImage, xCount, yCount);
+        Image srcImage = ImageTools.loadImageFromResource(resourcePath);
+        Image[] images = ImageTools.getSubimageArray(srcImage, xCount, yCount);
 
         Image image = images[0];
-        int[][] imageArrays = ImageToolbox.imageToIntRowColArrays((BufferedImage) images[0]);
+        int[][] imageArrays = ImageTools.imageToIntRowColArrays((BufferedImage) images[0]);
         int[] argb;
         
         for (int row = 0; row < imageArrays.length; row++) {
             for (int col = 0; col < imageArrays[row].length; col++) {
-                argb = ImageToolbox.getARGB(imageArrays[row][col]);
+                argb = ImageTools.getARGB(imageArrays[row][col]);
                 System.out.printf("[%d, %d] %d : %s : [A %d] [R %d] [G %d] [B %d] \n", row, col, imageArrays[row][col], Integer.toHexString(imageArrays[row][col]), argb[0], argb[1], argb[2], argb[3]);
             }
         }

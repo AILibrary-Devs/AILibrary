@@ -5,7 +5,7 @@
  */
 package neural_net;
 
-import common.Sigmoid;
+import common.SigmoidTransform;
 import common.InitializerIntf;
 import common.InitializerConstant;
 import common.InitializerRandom;
@@ -166,7 +166,7 @@ public class NeuralNetOlde implements NeuralNetIntf {
 //    }
 //
 //    private static void calculateErrors(NeuralNetIntf net, double[] expectedData) {
-//        Sigmoid sigmoid = new Sigmoid();
+//        SigmoidTransform sigmoid = new SigmoidTransform();
 //        net.getOutputLayer().updateErrorsFromExpectedResults(expectedData, sigmoid);
 //        net.getHiddenLayer().updateErrorsFromConsumerLayer(net.getOutputLayer(), sigmoid);
 //    }
