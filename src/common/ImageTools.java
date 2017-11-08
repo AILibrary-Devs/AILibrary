@@ -107,7 +107,10 @@ public class ImageTools {
         return getARGBSum(getARGB(color));
     }
     
-//    public static double get
+    public static double getARGBLinearTransform(int[] argb){
+        return LinearTransform.transform(argb[ARGB_RED] + argb[ARGB_GREEN] + argb[ARGB_BLUE], 0.0, 765.0, 0.0, 1.0);
+    }
+            
         
 
 }

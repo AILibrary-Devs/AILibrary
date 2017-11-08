@@ -11,33 +11,46 @@ package common;
  */
 public class LinearTransform implements RangeTransformIntf {
 
+//<editor-fold defaultstate="collapsed" desc="Constructors">
     {
-        inputMinimum = INPUT_MINIMUM_DEFAULT;
-        inputMaximum = INPUT_MAXIMUM_DEFAULT;
-        outputMinimum = OUTPUT_MINIMUM_DEFAULT;
-        outputMaximum = OUTPUT_MAXIMUM_DEFAULT;
-    }
+    inputMinimum = INPUT_MINIMUM_DEFAULT;
+    inputMaximum = INPUT_MAXIMUM_DEFAULT;
+    outputMinimum = OUTPUT_MINIMUM_DEFAULT;
+    outputMaximum = OUTPUT_MAXIMUM_DEFAULT;
+}
     
     public LinearTransform() {}
-
+    
     public LinearTransform(double inputMinimum, double inputMaximum, double outputMinimum, double outputMaximum) {
         this.inputMinimum = inputMinimum;
         this.inputMaximum = inputMaximum;
-
+        
         this.outputMinimum = outputMinimum;
         this.outputMaximum = outputMaximum;
     }
-
+//</editor-fold>
+    
+    
+    
+//<editor-fold defaultstate="collapsed" desc="Methods">
+    public static double transform(double value, double inputMinimum, double inputMaximum, double outputMinimum, double outputMaximum) {
+        return value * (outputMaximum - outputMinimum) / (inputMaximum - inputMinimum);
+    }
+    
+//<editor-fold defaultstate="collapsed" desc="RangeTransformIntf">
     @Override
     public double transform(double value) {
-        return value * (outputMaximum - outputMinimum) / (inputMaximum - inputMaximum);
+        return transform(value, inputMinimum, inputMaximum, outputMinimum, outputMaximum);
     }
-
+    
     @Override
     public double derivative(double value) {
         return 1.0;
     }
-
+//</editor-fold>
+//</editor-fold>
+    
+    
 //<editor-fold defaultstate="collapsed" desc="Properties">
     public static final double INPUT_MINIMUM_DEFAULT = -10.0;
     public static final double INPUT_MAXIMUM_DEFAULT = 10.0;
