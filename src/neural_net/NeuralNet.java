@@ -70,6 +70,7 @@ public class NeuralNet implements NeuralNetIntf {
 //        return new NeuralNet(layerNodeCounts, new InitializerRandom(), new NeuralLayer());
 //    }    
 //</editor-fold>
+    
 //<editor-fold defaultstate="collapsed" desc="Properties">
     private ArrayList<NeuralLayerIntf> layers;
 
@@ -143,11 +144,19 @@ public class NeuralNet implements NeuralNetIntf {
             applyLearning();
         }
     }
+
+    public void train(double[] inputs, double[] expected, int iterationLimit) {
+        for (int iteration = 0; iteration < iterationLimit; iteration++) {
+            initializeLearning(); //set weights to zero
+            runTrainingSession(this, inputs, expected);
+            applyLearning();
+        }
+    }
 //</editor-fold>
 
     public double[] computeOutputs(double[] inputData) throws Exception {
         if (inputData.length != getInputLayer().getCount()) {
-            throw new Exception("Input data size does not match input layer size.");
+            throw new Exception(String.format("Input data size [%d] does not match input layer size [%d].\n", inputData.length, getInputLayer().getCount()));
         }
 
         getInputLayer().setOutputValues(inputData);
@@ -166,7 +175,7 @@ public class NeuralNet implements NeuralNetIntf {
 
     private static boolean setInputLayerData(NeuralNetIntf net, double[] inputData) {
         if (inputData.length != net.getInputLayer().getCount()) {
-            System.out.print("Input data size does not match input layer size.");
+            System.out.printf("Input data size [%d] does not match input layer size [%d].\n", inputData.length, net.getInputLayer().getCount());
             return false;
         } else {
             return net.getInputLayer().setOutputValues(inputData);

@@ -65,6 +65,32 @@ public class ImageTools {
         return images;
     }
 
+    public static double[] imageToDoubleRowColArray(BufferedImage image) {
+        double[][] arrays = imageToDoubleRowColArrays(image);
+        double[] result = new double[arrays.length * arrays[0].length];
+
+        int idx = 0;
+        for (int row = 0; row < arrays.length; row++) {
+            for (int col = 0; col < arrays[row].length; col++) {
+                result[idx] = arrays[row][col];
+                idx++;
+            }
+        }
+        return result;
+    }
+    
+    public static double[][] imageToDoubleRowColArrays(BufferedImage image) {
+        double[][] result = new double[image.getHeight()][image.getWidth()];
+
+        for (int row = 0; row < result.length; row++) {
+            for (int col = 0; col < result[row].length; col++) {
+//                result[row][col] = image.getRGB(col, row);
+                result[row][col] = getARGBLinearTransform(getARGB(image.getRGB(col, row)));
+            }
+        }
+        return result;
+    }
+    
     public static int[][] imageToIntRowColArrays(BufferedImage image) {
         int[][] result = new int[image.getHeight()][image.getWidth()];
 
