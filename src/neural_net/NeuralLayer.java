@@ -141,8 +141,7 @@ public class NeuralLayer implements NeuralLayerIntf{//, NeuralLayerFactoryIntf {
             //deviations from the consumer layer
             providerLayerNeuron.setError(errorSummedFromConsumerLayer);
         }
-        
-        
+               
         return true;
     }
     
